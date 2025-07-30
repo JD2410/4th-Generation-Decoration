@@ -1486,7 +1486,7 @@ footer .footer--contact .email {
   margin-bottom: 16px;
 }
 .domestic #domesticContainer p {
-  line-height: 1.7em;
+  line-height: 1.75em;
 }
 .domestic #domesticContainer span {
   display: none;
@@ -1503,7 +1503,7 @@ footer .footer--contact .email {
   padding: 20px;
 }
 .domestic-services p {
-  line-height: 1.4;
+  line-height: 1.75;
   margin-bottom: 20px;
 }
 .domestic-services p:last-child {
@@ -1606,7 +1606,7 @@ footer .footer--contact .email {
   top: -40px;
 }
 .domestic-gallery p {
-  line-height: 1.4;
+  line-height: 1.75;
   margin-bottom: 20px;
 }
 
@@ -1789,7 +1789,7 @@ footer .footer--contact .email {
   margin-bottom: 16px;
 }
 .commercial #commercialContainer p {
-  line-height: 1.7em;
+  line-height: 1.75em;
 }
 .commercial #commercialContainer span {
   display: none;
@@ -1806,7 +1806,7 @@ footer .footer--contact .email {
   padding: 20px;
 }
 .commercial-services p {
-  line-height: 1.4;
+  line-height: 1.75;
   margin-bottom: 20px;
 }
 .commercial-services p:last-child {
@@ -1866,7 +1866,7 @@ footer .footer--contact .email {
     font-size: 2.6em;
   }
   .commercial #commercialContainer p {
-    font-size: 1.2em;
+    font-size: 1.15em;
   }
   .commercial #commercialContainer span {
     display: unset;
@@ -1896,7 +1896,7 @@ footer .footer--contact .email {
     max-width: 1400px;
     padding: 20px;
     display: grid;
-    grid-template-columns: 2.75fr 9fr;
+    grid-template-columns: 3fr 9fr;
     gap: 30px;
   }
   .commercial-services .services--container .listed-services h3 {
@@ -2016,7 +2016,7 @@ footer .footer--contact .email {
   margin-bottom: 16px;
 }
 .about-us-section .about-container p {
-  line-height: 1.7em;
+  line-height: 1.75em;
   margin-bottom: 20px;
 }
 
@@ -2109,7 +2109,7 @@ footer .footer--contact .email {
     font-size: 2.6em;
   }
   .about-us-section .about-container p {
-    font-size: 1.2em;
+    font-size: 1.15em;
   }
   .about-us-section .about-container a {
     width: 150px;
@@ -2129,7 +2129,7 @@ footer .footer--contact .email {
     gap: 40px;
   }
   .where .gen-container p {
-    line-height: 1.9em;
+    line-height: 1.75em;
   }
   .where .gen-container .where-images {
     position: relative;
