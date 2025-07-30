@@ -1,0 +1,81 @@
+@use '../variables';
+
+#features {
+    margin-top: -15vh;
+
+    .features--wrapper {
+        display: grid;
+        gap: 20px;
+        max-width: variables.$maxwidth;
+        padding: 20px;
+        color: variables.$black;
+
+        .card.residential h3::before { background-image: url('../assets/images/front-page/features/icon-residential.webp'); }
+        .card.commercial h3::before { background-image: url('../assets/images/front-page/features/icon-commercial.webp'); }
+        .card.faq h3::before { background-image: url('../assets/images/front-page/features/icon-faq.webp'); }
+        .card {
+            background-color: #fff;
+            border-radius: 6px;
+            border-bottom: 6px solid variables.$lightblue;
+            padding: 16px;
+            box-shadow: 0 3px 8px 0 #0000004f;
+            display: grid;
+            gap: 10px;
+
+            h3 {
+                display: flex;
+                align-items: center;
+                font-weight: 700;
+                font-size: 1em;
+            }
+            h3::before {
+                content: "";
+                background-color: #E7F7FD;
+                width: 50px;
+                height: 50px;
+                background-repeat: no-repeat;
+                background-position: center;
+                display: block;
+                border-radius: 8px;
+                margin-right: 8px;
+            }
+            p {
+                line-height: 1.5;
+                opacity: 0.8;
+            }
+        }
+    }
+}
+
+@media (min-width: variables.$mobile-breakpoint) {
+
+    #features {
+        margin-top: -120px;
+        display: flex;
+        justify-content: center;
+        padding: 20px 30px;
+        position: absolute;
+        width: 100%;
+        z-index: 10;
+
+        .features--wrapper {
+            grid-template-columns: 1fr 1fr 1fr;
+            padding: 0;
+
+            .card {
+                gap: 0px;
+                
+                h3 {
+                    font-size: 1.1em;
+                    margin-bottom: 12px;
+                }
+                p {
+                    line-height: 1.8;
+                }
+            }
+
+        }
+    }
+
+    
+}

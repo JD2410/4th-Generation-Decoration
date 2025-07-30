@@ -1,0 +1,88 @@
+@use '../variables';
+
+#commercial {
+    position: absolute;
+    top: -60px;
+}
+.commercial-home {
+    background-color: #fafafa;
+    position: relative;
+    
+    .commercial--images {
+        display: none;
+    }
+    .commercial--wrapper {
+        .commercial--text {
+            .commercial--lead-text {
+                display: flex;
+                flex-direction: column-reverse;
+
+                .section-head {
+                    justify-content: flex-end;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: center top;
+                    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)), url("../assets/images/front-page/commercial/mobile-commercial.webp");
+                }
+            }
+            .commercial--text-content {
+                margin: 0 20px;
+                line-height: 1.3;
+                p {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: variables.$mobile-breakpoint) {
+    #commercial {
+        top: -70px;
+    }
+    .commercial-home {
+        display: flex;
+        justify-content: center;
+        padding: 40px 0;
+
+        .commercial--wrapper {
+            max-width: variables.$maxwidth;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 50fr 50fr;
+            gap: 40px;
+            align-items: center;
+            margin: 0 20px;
+
+            .commercial--text {
+                .commercial--lead-text {
+                    flex-direction: column;
+                    .section-head {
+                        background-image: none;
+                    }
+                }
+                .commercial--text-content {
+                    margin: 0;
+                    line-height: 1.75;
+                }
+            }
+
+            .commercial--images {
+                display: unset;
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: right top;
+                }
+            }
+        }  
+    }
+}
+@media (min-width: variables.$laptop-breakpoint) { 
+    .commercial-home {
+        padding: 70px 0;
+    }
+}

@@ -1,0 +1,80 @@
+@use '../variables';
+
+#faq {
+    position: absolute;
+    top: -60px;
+}
+.faq {
+    display: flex;
+    justify-content: center;
+    position: relative;
+     
+    .faq--wrapper {
+        display: grid;
+        gap: 20px;
+        max-width: variables.$maxwidth;
+        padding: 20px;
+
+        h2 {
+            text-align: center;
+        }
+        .faq--qa {
+            border: 1px solid #D4D4D4;
+            padding: 15px 20px;
+            margin-bottom: 18px;
+            border-radius: 10px;
+            line-height: 1.4rem;
+            cursor: pointer;
+
+            .faq--question {
+                color: variables.$lightblue;
+                font-weight: 700;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            .faq--question::after {
+                content: "";
+                width: 23px;
+                height: 13px;
+                display: block;
+                background-image: url("../assets/images/front-page/faq/icon-chevron.webp");
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+            .faq--answer {
+                height: 0px;
+                transition: height 500ms;
+                overflow: hidden;
+            }
+            .faq--answer.open {
+                height: unset;
+            }
+            .faq--answer::before {
+                content: "";
+                background-color: #D4D4D4;
+                height: 1px;
+                width: 100%;
+                margin: 12px 0;
+                display: block;
+            }
+        }
+    }
+}
+@media (min-width: variables.$mobile-breakpoint) {
+    #faq {
+        top: -70px;
+    }
+    .faq {
+        padding: 30px 0;
+
+        .faq--wrapper {
+            .faq--qa {
+                .faq--question::after {
+                    width: 9px;
+                    height: 5px;
+                }
+            }
+        }
+    }
+}

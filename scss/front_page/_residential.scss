@@ -1,0 +1,57 @@
+@use '../variables';
+
+#residential {
+    position: absolute;
+    top: -60px;
+}
+.residential .wrapper .text .section-head {
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: linear-gradient(
+                    rgba(0, 0, 0, 0), 
+                    rgb(0, 0, 0)
+                ), 
+                url("../assets/images/front-page/domestic/mobile-domestic.webp");
+}
+.residential .wrapper .text .lead-text {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: variables.$mobile-breakpoint) {
+    #residential {
+        top: -70px;
+    }
+    .residential.even .wrapper {
+        align-items: center;
+    }
+    .residential.even .wrapper .text .lead-text {
+        flex-flow: column;
+    }
+    .residential .images {
+        display: grid;
+        gap: 20px;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            object-position: right top;
+        }
+        div  {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            img {
+                max-height: 354px;
+            }  
+        }
+    }
+
+}

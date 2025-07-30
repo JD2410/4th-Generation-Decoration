@@ -1,0 +1,93 @@
+@use '../variables';
+
+#testimonials {
+    background-color: #FAFAFA;
+    padding: 14px;
+    display: flex;
+    justify-content: center;
+
+    .testimonials--wrapper {
+        max-width: variables.$maxwidth;
+        overflow: hidden;
+        padding: 40px 20px;
+        position: relative;
+
+        h2 {
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        #testimonialsgroup.transition {
+            transition: margin-left 1s;
+        }
+        #testimonialsgroup.next {
+            margin-left: -340px;
+        }
+        #testimonialsgroup {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            width: 10000%;
+
+            .testimonial--card {
+                padding: 30px;
+                background-color: #fff;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-content: center;
+                text-align: center;
+                border-radius: 10px;
+                box-shadow: 0 4px 14px 0 #4d43433d;
+                width: 320px;
+                height: 100%;
+
+                h4 {
+                    font-weight: 700;
+                    margin-bottom: 4px;
+                    line-height: 1.2em;
+                }
+                p {
+                    line-height: 1.6;
+                }
+                p:first-child {
+                    color: #D1D1D2;
+                    margin-top: 3px;
+                }
+                p:first-child:after {
+                    display: block;
+                    content: "";
+                    height: 30px;
+                    background-repeat: repeat-x;
+                    background-image: url("../assets/images/front-page/testimonials/icon-star.webp");
+                    width: 161px;
+                    margin: 12px auto;
+                }
+                .testimonial--ratings {
+                    display: flex;
+                    justify-content: center;
+                    gap: 12px;
+                    padding: 12px 0;
+                }
+            }
+        }
+    }
+}
+@media (min-width: variables.$mobile-breakpoint) {
+    #testimonials.animated .testimonials--wrapper:before, #testimonials.animated .testimonials--wrapper:after {
+        content: "";
+        width: 40px;
+        height: 100%;
+        position: absolute;
+        background: linear-gradient(90deg, #fafafa 0% 30%, #fafafa00);
+        top: 0;
+    }
+    #testimonials.animated .testimonials--wrapper:before {
+        left: 0;
+    }
+    #testimonials.animated .testimonials--wrapper:after {
+        right: 0;
+        rotate: 180deg;
+    }
+    
+}

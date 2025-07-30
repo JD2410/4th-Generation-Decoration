@@ -1,0 +1,235 @@
+@use '../variables';
+
+.commercial {
+    overflow: hidden;
+    background-color: #FAFAFA;
+    position: relative;
+
+    #commercialContainer.open {
+        span {
+            display: unset;
+        }
+    }
+    #commercialContainer {
+        min-height: 60vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 20px;
+        z-index: 4;
+        position: relative;
+        max-width: variables.$maxwidth;
+
+        h1 {
+            font-size: 1.5em;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        p {
+            line-height: 1.7em;
+        }
+        span {
+            display: none;
+        }
+        .more-text {
+            line-height: 2.8em;
+            width: 100%;
+            color: variables.$lightblue;
+            display: block;
+            cursor: pointer;
+        }
+    }
+}
+
+.commercial-services {
+    padding: 20px;
+
+    p {
+        line-height: 1.4;
+        margin-bottom: 20px;
+    }
+    p:last-child {
+        margin-bottom: 0;
+    }
+    .services--introduction {
+        padding: 0 0 20px;
+    }
+    ul {
+        margin-top: 12px;
+
+        li {
+            margin-bottom: 16px;
+            display: flex;
+            align-items: flex-start;
+            font-weight: 600;
+            line-height: 1.4;
+            position: relative;
+            padding-left: 22px;
+        }
+        li::before {
+            content: "";
+            background-color: variables.$lightblue;
+            display: block;
+            border-radius: 50%;
+            width: 11px;
+            height: 11px;
+            margin-right: 8px;
+            position: absolute;
+            left: 0;
+            top: 6px;
+        }
+    }
+   
+}
+@media (min-width: variables.$mobile-breakpoint) {
+
+.page-template-commercial .contact {
+    background-color: #FAFAFA;
+}
+.commercial {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    #commercialContainer {
+        min-height: 480px;
+        h1 {
+            font-size: 2.6em;
+        }
+        p {
+            font-size: 1.2em;
+        }
+        span {
+            display: unset;
+        }
+        .filled {
+            margin-bottom: 0;
+        }
+        .more-text {
+            display: none;
+        }
+        .actions {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
+        }
+    }
+}
+.commercial-services {
+    display: flex;
+    justify-content: center;
+
+    .services--container {
+        max-width: variables.$maxwidth;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 2.75fr 9fr;
+        gap: 30px;
+
+        .listed-services {
+
+            h3 {
+                color: variables.$lightblue; 
+            }
+
+            li {
+                margin-bottom: 0px;
+            }
+
+            .interior-services {
+                border-bottom: 2px solid variables.$lightblue;
+
+                h3 {
+                    margin: 10px 0 26px;
+                }
+                ul {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 24px;
+                    padding: 0 0 26px 0;
+                }
+            }
+            .exterior-services {
+                padding-top: 12px;
+
+                h3 {
+                    margin: 16px 0;
+                }
+                ul {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    gap: 24px;
+                    padding: 0 0 26px 0;
+                }
+            }
+        }
+    }
+}
+
+}
+ @media (min-width: 1000px) {
+    .commercial .circles {
+        right: calc(50% + 8px);
+    }
+    #commercialContainer {
+        p {
+            width: 60%;
+            margin-left: 40%;
+        }
+        h1 {
+            width: 60%;
+            margin-left: 40%;
+        }
+        .actions {
+            margin-left: 40%;
+        }
+    }
+    #commercialContainer::before {
+        content: "";
+        background-image: url("../assets/images/commercial/commercial-main.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size:contain;
+        display: block;
+        left: 20px;
+        width: calc(40% - 40px);
+        height: 100%;
+        position: absolute;
+    }
+ }
+
+
+@media (min-width: variables.$laptop-breakpoint) {
+    .commercial {
+        #commercialContainer {
+            min-height: 500px;
+        }
+    }
+}
+@media (min-width: variables.$desktop-breakpoint) {
+    .commercial {
+        .circles {
+            right: calc(50% - 97px);
+        }
+        #commercialContainer {
+            min-height: 580px;
+            p {
+                width: 47%;
+                margin-left: 51%;
+            }
+            h1 {
+                width: 47%;
+                margin-left: 51%;
+            }
+            .actions {
+                margin-left: 51%;
+            }
+        }
+        #commercialContainer::before {
+            height: 100%;
+            left: 0px;
+            width: 50%;
+            background-size: unset
+        }
+    }
+}

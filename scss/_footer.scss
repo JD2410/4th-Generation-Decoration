@@ -1,0 +1,93 @@
+@use 'variables';
+
+footer {
+    display: grid;
+    gap: 20px;
+    padding: 20px;
+    line-height: 1.6;
+
+    .footer--info::before {
+        content: "";
+        height: 50px;
+        width: 100%;
+        background-image: url("../assets/images/logo-default.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+        display: block;
+        background-position: center;
+        margin-bottom: 20px;
+    }
+    h4 {
+        font-weight: 700;
+    }
+    li {
+        margin: 6px 0;
+    }
+    a {
+        color: variables.$lightblue;
+        display: block;
+        height: 40px;
+        line-height: 40px;
+        background-position: left center;
+        background-repeat: no-repeat;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    .footer--contact {
+        a {
+            padding-left: 40px;
+            background-position: left center;
+            background-repeat: no-repeat;
+        }
+        .call {
+            background-image: url('../assets/images/icon-black-phone.webp');
+        }
+        .email {
+            background-image: url('../assets/images/icon-black-email.webp');
+        }
+    }
+}
+@media (min-width: variables.$mobile-breakpoint) {
+    footer {
+        background-color: variables.$blue;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+
+        .footer--info::before {
+            background-image: url('../assets/images/logo-white.webp');
+            background-position: left;
+        }
+
+        .footer--wrapper {
+            max-width: variables.$maxwidth;
+            padding: 20px;
+            gap: 30px;
+            display: grid;
+            grid-template-columns: 60fr 20fr 20fr;
+        }
+
+        a {
+            color: #fff;
+            text-decoration: none;
+            line-height: 30px;
+        }
+
+        h4 {
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin: 0;
+        }
+        .footer--contact {
+            .call {
+                background-image: url('../assets/images/icon-white-phone.webp');
+            }
+            .email {
+                background-image: url('../assets/images/icon-white-email.webp');
+            }
+        }
+    }
+}

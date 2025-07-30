@@ -1,0 +1,220 @@
+@use '../variables';
+
+#about {
+    position: absolute;
+    top: -60px;
+}
+.about .wrapper .text .section-head {
+    justify-content: flex-end;
+    flex-direction: column;
+    align-items: flex-start;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)), url('../assets/images/front-page/team-profile/mobile-about.webp');
+}
+
+@media (min-width: variables.$mobile-breakpoint) {
+    #about {
+        top: -70px;
+    }
+    .about.even {
+        padding-top: 180px;
+        .wrapper {
+            grid-template-columns: 100fr;
+
+            .text {
+                order: -1;
+            }
+        }
+        #profile-container.active  {
+            #profile-images {
+                gap: 10px;
+                div { opacity: 0.5; box-shadow: 0 0 0 rgba(0, 0, 0, 0.29); }
+            }
+            #profile-images.keith-con {
+                grid-template-columns: 5fr 1fr 1fr 1fr 1fr 1fr;
+                div.keith {
+                    opacity: 1;
+                    height: 100%;
+                    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.29);
+                }
+            }
+            #profile-images.sean-con {
+                grid-template-columns: 1fr 5fr 1fr 1fr 1fr 1fr;
+                div.sean {
+                    opacity: 1;
+                    height: 100%;
+                    margin-top: 0;
+                    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.29);
+                }
+            }
+            #profile-images.john-con {
+                grid-template-columns: 1fr 1fr 5fr 1fr 1fr 1fr;
+                div.john {
+                    opacity: 1;
+                    height: 100%;
+                    margin-top: 0;
+                    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.29);
+                }
+            }
+            #profile-images.jason-con {
+                grid-template-columns: 1fr 1fr 1fr 5fr 1fr 1fr;
+                div.jason {
+                    opacity: 1;
+                    height: 100%;
+                    margin-top: 0;
+                    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.29);
+                }
+            }
+            #profile-images.elliott-con {
+                grid-template-columns: 1fr 1fr 1fr 1fr 5fr 1fr;
+                div.elliott {
+                    opacity: 1;
+                    height: 100%;
+                    margin-top: 0;
+                    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.29);
+                }
+            }
+            #profile-images.dave-con {
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 5fr;
+                div.dave {
+                    opacity: 1;
+                    height: 100%;
+                    margin-top: 0;
+                    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.29);
+                }
+            }
+        }
+        #profile-container {
+
+            #profile-images {
+                display: grid;
+                margin-top: -130px;
+                gap: 20px;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+                transition: grid-template-columns 0.75s, gap 0.75s;
+                padding: 0 20px;
+
+                div {
+
+                    position: relative;
+                    background-repeat: no-repeat;
+                    height: 260px;
+                    border-radius: 4px;
+                    box-shadow: 0 2px 11px rgba(0, 0, 0, 0.29);
+                    transition: opacity 0.75s, margin-top 0.75s, height 0.75s, box-shadow 0.75s;
+                    background-size: cover;
+                    z-index: 2;
+
+                    span {
+                        background: #fff;
+                        padding: 4px 12px;
+                        display: inline-block;
+                        position: absolute;
+                        right: 0px;
+                        box-shadow: 0 3px 4px #0000006b;
+                        border-radius: 3px;
+                        font-weight: 500;
+                        top: 0;
+                        border-bottom: 3px solid variables.$lightblue;
+                        border-right: 3px solid variables.$lightblue;
+                        opacity: 0;
+                        transition: top 0.5s, right 0.5s, opacity 0.5s;
+                    }
+
+                }
+                div:hover {
+                    z-index: 5;
+                    
+                    span {
+                        opacity: 1;
+                        top: 12px;
+                        right: -15px;
+                        
+                    }
+                }
+                .dave  {
+                    background-image: url("../assets/images/front-page/team-profile/dave.jpg");
+                    background-position: 44%;
+                    margin-top: 60px;
+                }
+                .elliott  {
+                    background-image: url("../assets/images/front-page/team-profile/elliott.jpg");
+                    background-position: 53%;
+                }
+                .jason  {
+                    background-image: url("../assets/images/front-page/team-profile/jason.jpg");
+                    background-position: 36%;
+                    margin-top: 31px;
+                }
+                .john  {
+                    background-image: url("../assets/images/front-page/team-profile/john.jpg");
+                    background-position: 48%;
+                    margin-top: 10px;
+                }
+                .keith  {
+                    background-image: url("../assets/images/front-page/team-profile/keith.jpg");
+                    background-position: 33%;
+                }
+                .sean  {
+                    background-image: url("../assets/images/front-page/team-profile/sean.jpg");
+                    background-position: 44%;
+                    margin-top: 50px;
+                }
+            }
+            
+            
+        }
+    }
+}
+@media ((min-width: variables.$laptop-breakpoint) and (max-width: 1255px)) {
+    .about.even {
+        padding-top: 150px;
+        #profile-container {
+            
+            #profile-images {
+                margin-top: -100px;
+                grid-template-columns: 1fr 1fr 1fr;
+
+                .dave  {
+                    margin-top: 0px;
+                }
+                .jason  {
+                    margin-top: 0px;
+                }
+                .john  {
+                    margin-top: 0px;
+                }
+                .sean  {
+                    margin-top: 0px;
+                }
+            }
+            
+        }
+        #profile-container.active  {
+            #profile-images.keith-con, #profile-images.jason-con {
+                grid-template-columns: 3.8fr 1fr 1fr;
+            }
+            #profile-images.sean-con, #profile-images.elliott-con {
+                grid-template-columns: 1fr 3.8fr 1fr;
+            }
+            #profile-images.john-con, 
+            #profile-images.dave-con {
+                grid-template-columns: 1fr 1fr 3.8fr;
+            }
+        }
+    }
+}
+@media (min-width: variables.$laptop-breakpoint) {
+    .about.even {
+        padding-top: 130px;
+        .wrapper {
+            grid-template-columns: 45fr 55fr;
+
+            .text {
+                order: 0;
+            }
+        }
+    }
+}

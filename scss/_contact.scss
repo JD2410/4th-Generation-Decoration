@@ -1,0 +1,155 @@
+@use 'variables';
+
+#contact {
+    position: absolute;
+    top: -60px;
+}
+
+.contact  {
+    background-color: variables.$blue;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .contact-wrapper {
+        max-width: variables.$maxwidth;
+        width: 100%;
+        padding: 20px;
+
+        h3 {
+            margin-bottom: 12px;
+        }
+        p {
+            line-height: 1.5;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+        a {
+            color: #fff;
+            display: block;
+            text-decoration: none;
+            display: flex;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .phone-number {
+            margin-bottom: 20px;
+        }
+        .phone-number::before {
+            content: "";
+            height: 22px;
+            display: block;
+            width: 40px;
+            background-image: url('../assets/images/icon-white-phone.webp');
+            background-position: left center;
+            background-repeat: no-repeat;
+        }
+        .email-address::before {
+            content: "";
+            height: 22px;
+            display: block;
+            width: 40px;
+            background-image: url('../assets/images/icon-white-email.webp');
+            background-position: left center;
+            background-repeat: no-repeat;
+        }
+        img {
+            margin-right: 20px;
+        }
+        .contact--form {
+            padding-top: 30px;
+
+            .wpcf7-not-valid-tip {
+                color: #fff;
+                margin-top: 8px;
+                background: #dc3232;
+                padding: 5px 8px;
+                border-radius: 5px;
+            }
+            .wpcf7 form .wpcf7-response-output {
+                padding: 15px 20px;
+                background: #fff;
+                color: #000;
+                border-radius: 12px;
+                margin-top: 20px;
+            }
+            .wpcf7 form.failed .wpcf7-response-output {
+                color: #fff;
+                background: #dc3232;
+            }
+            .wpcf7 form.invalid .wpcf7-response-output {
+                color: #fff;
+                background-color: #ffb900;
+            }
+        }
+        
+    }
+}
+@media (min-width: variables.$mobile-breakpoint) {
+    #contact {
+        top: -70px;
+    }
+    .contact  {
+        background-color: unset;
+        color: variables.$black;
+        padding: 30px 0;
+
+        .contact-wrapper {
+            display: grid;
+            gap: 40px;
+            grid-template-columns: 52fr 48fr;
+
+            a {
+                color: variables.$black;
+            }
+            .phone-number::before {
+                background-image: url('../assets/images/icon-black-phone.webp');
+            }
+            .email-address::before {
+                background-image: url('../assets/images/icon-black-email.webp');
+            }
+
+            .contact--description {
+                padding-top: 40px;
+                p {
+                    line-height: 1.7;
+                }
+            }
+            .contact--form {
+                background-color: variables.$blue;
+                color: #fff;
+                padding: 40px 40px 5px;
+                border-radius: 8px;
+
+                .wpcf7 form .wpcf7-response-output {
+                    border-radius: 6px;
+                    margin: 0;
+                }
+
+                .combine {
+                    display: flex;
+                    gap: 20px;
+                }
+                h2 {
+                    display: none;
+
+                    span {
+                        color: variables.$lightblue;
+                    }
+                }
+                .submit-messsage {
+                    display: grid;
+                    grid-template-columns: 150px 1fr;
+
+                    p {
+                        padding: 0;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+        
+    }
+}
