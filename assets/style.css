@@ -2048,7 +2048,6 @@ footer .footer--contact .email {
 
 .generations {
   background-color: #fafafa;
-  padding: 20px;
 }
 .generations h1 {
   text-align: center;
@@ -2147,6 +2146,7 @@ footer .footer--contact .email {
   }
   .gen-container {
     max-width: 1400px;
+    position: relative;
   }
   .generations {
     display: -webkit-box;
@@ -2159,6 +2159,7 @@ footer .footer--contact .email {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: relative;
   }
   .generations .jason-canning.profile, .generations .harold-canning.profile,
   .generations .profile {
@@ -2169,10 +2170,11 @@ footer .footer--contact .email {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    gap: 20px;
+    gap: 60px;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    position: relative;
   }
   .generations .jason-canning.profile img, .generations .harold-canning.profile img,
   .generations .profile img {
@@ -2199,7 +2201,7 @@ footer .footer--contact .email {
   }
   .about-container::before {
     content: "";
-    background-image: url("../assets/images/commercial/commercial-main.png");
+    background-image: url("../assets/images/our-roots/our-roots.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -2213,6 +2215,72 @@ footer .footer--contact .email {
 @media (min-width: 1024px) {
   .about-us-section .about-container {
     min-height: 500px;
+  }
+  .generations .jason-canning.profile, .generations .harold-canning.profile,
+  .generations .profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 60px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .generations .jason-canning.profile img, .generations .harold-canning.profile img,
+  .generations .profile img {
+    min-width: 136px;
+    min-height: 467px;
+    max-width: unset;
+    width: unset;
+  }
+  .generations .profile::before,
+  .generations .profile::after,
+  .generations .profile > div:first-child:before {
+    content: "";
+    display: block;
+    background-color: #20B8E8;
+    position: absolute;
+    top: 20px;
+    left: -130px;
+    border-radius: 50%;
+  }
+  .generations .profile::before {
+    opacity: 0.3;
+    width: 75px;
+    height: 75px;
+  }
+  .generations .profile::after {
+    opacity: 0.3;
+    width: 55px;
+    height: 55px;
+    left: -120px;
+    top: 30px;
+  }
+  .generations .profile > div:first-child:before {
+    opacity: 1;
+    width: 35px;
+    height: 35px;
+    left: -110px;
+    top: 40px;
+  }
+  .generations .gen-container {
+    padding-left: 150px;
+  }
+  .generations .gen-container::before {
+    content: "";
+    display: block;
+    width: 5px;
+    margin-top: 120px;
+    height: calc(100% - 120px);
+    position: absolute;
+    left: 55px;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(90%, #20b8e8), to(rgba(32, 184, 232, 0)));
+    background: linear-gradient(180deg, #20b8e8 90%, rgba(32, 184, 232, 0) 100%);
   }
 }
 @media (min-width: 1200px) {

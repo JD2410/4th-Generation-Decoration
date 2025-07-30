@@ -51,7 +51,7 @@
 }
 .generations {
     background-color: #fafafa;
-    padding: 20px;
+
 
     h1 {
         text-align: center;
@@ -133,25 +133,27 @@
                     margin-top: -70px;
                     margin-left: 30%;
                     z-index: 5;
-
                 }
             }
         }
     }
     .gen-container {
         max-width: variables.$maxwidth;
+        position: relative;
     }
     .generations {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
 
         .jason-canning.profile, .harold-canning.profile,
         .profile {
             display: flex;
             flex-direction: row;
-            gap: 20px;
+            gap: 60px;
             align-items: center;
+            position: relative;
 
             img {
                 min-width: 136px;
@@ -160,8 +162,8 @@
                 width: unset;
             }
         }
-
     }
+    
 }
  @media (min-width: 1000px) {
     .about-us-section .circles {
@@ -182,7 +184,7 @@
     }
     .about-container::before {
         content: "";
-        background-image: url("../assets/images/commercial/commercial-main.png");
+        background-image: url("../assets/images/our-roots/our-roots.png");
         background-repeat: no-repeat;
         background-position: center;
         background-size:contain;
@@ -197,6 +199,67 @@
     .about-us-section {
         .about-container {
             min-height: 500px;
+        }
+    }
+    .generations {
+
+        .jason-canning.profile, .harold-canning.profile,
+        .profile {
+            display: flex;
+            flex-direction: row;
+            gap: 60px;
+            align-items: center;
+            position: relative;
+
+            img {
+                min-width: 136px;
+                min-height: 467px;
+                max-width: unset;
+                width: unset;
+            }
+        }
+        .profile::before,
+        .profile::after,
+        .profile > div:first-child:before  {
+            content: "";
+            display: block;
+            background-color: variables.$lightblue;
+            position: absolute;
+            top: 20px;
+            left: -130px;
+            border-radius: 50%;
+        }
+        .profile::before {
+            opacity: 0.3;
+            width: 75px;
+            height: 75px;
+        }
+        .profile::after {
+            opacity: 0.3;
+            width: 55px;
+            height: 55px;
+            left: -120px;
+            top: 30px;
+        }
+        .profile > div:first-child:before {
+            opacity: 1;
+            width: 35px;
+            height: 35px;
+            left: -110px;
+            top: 40px;
+        }
+        .gen-container {
+            padding-left: 150px;
+        }
+        .gen-container::before {
+            content: "";
+            display: block;
+            width: 5px;
+            margin-top: 120px;
+            height: calc(100% - 120px);
+            position: absolute;
+            left: 55px;
+            background: linear-gradient(180deg, #20b8e8 90%, #20b8e800 100%);
         }
     }
 }
