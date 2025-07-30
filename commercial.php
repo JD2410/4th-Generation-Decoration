@@ -15,7 +15,7 @@ $service_text = get_field('commercial_services_text');
         <?php endif; ?>
         <div class="more-text" data-extend="commercialContainer">more...</div>
         <div class="actions">
-            <a href="#contact" class="primary-button button-anim">Get in touch</a>
+            <a href="#contact" class="primary-button button-anim hero">Get in touch</a>
         </div>
     </div>
 </section>

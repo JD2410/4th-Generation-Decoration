@@ -15,8 +15,8 @@ $service_text = get_field('domestic_services_text');
         <?php endif; ?>
         <div class="more-text" data-extend="domesticContainer">more...</div>
         <div class="actions">
-            <a href="#contact" class="primary-button button-anim">Get in touch</a>
-            <a href="#gallery" class="primary-button button-anim-inverse">Our Work</a>
+            <a href="#contact" class="primary-button button-anim hero">Get in touch</a>
+            <a href="#gallery" class="primary-button button-anim-inverse hero">Our Work</a>
         </div>
     </div>
 </section>

@@ -33,18 +33,34 @@
     top: calc(-150% - 40px);
 }
 
-
+.primary-button.hero {
+    padding: 16px 21px;
+}
 .primary-button {
     background-color: variables.$lightblue;
     color: #fff;
     text-decoration: none;
     transition: background-color 0.5s;
     text-align: center;
-    padding: 16px 21px;
+    padding: 10px 21px;
     border-radius: 8px;
     font-weight: 500;
-    display: block;
+    display: inline-block;
     margin-bottom: 20px;
+    margin-right: 20px;
+}
+.primary-hollow-button {
+    background-color: #fff;
+    color: variables.$lightblue;
+    text-decoration: none;
+    transition: background-color 0.5s;
+    text-align: center;
+    padding: 10px 21px;
+    border-radius: 8px;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 20px;
+    border: 2px solid variables.$lightblue;
 }
 .button-anim {
     border: 2px solid variables.$lightblue;
@@ -80,13 +96,21 @@
         font-size: 1.1em;
     }
     .primary-button:not(.button-anim):not(.button-anim-inverse) {
-        transition: box-shadow 0.25s,  border-bottom-width 0.15s, margin-top 0.15s;
-        border-bottom: 0px solid darkblue;
+        transition: box-shadow 0.25s, background-color 0.25s, color 0.25s;
+        border: 2px solid variables.$lightblue;
     }
     .primary-button:hover:not(.button-anim):not(.button-anim-inverse) {
         box-shadow: 0 2px 9px 3px rgba(0, 0, 0, 0.1803921569);
-        border-bottom-width: 4px;
-        margin-top: -4px;
+        background-color: #fff;
+        color: variables.$lightblue;
+    }
+    .primary-hollow-button:not(.button-anim):not(.button-anim-inverse) {
+        transition: box-shadow 0.25s, background-color 0.25s, color 0.25s;
+    }
+    .primary-hollow-button:hover {
+        box-shadow: 0 2px 9px 3px rgba(0, 0, 0, 0.1803921569);
+        background-color: variables.$lightblue;
+        color: #fff;
     }
     .circles {
         left: 0px;

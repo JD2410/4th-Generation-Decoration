@@ -10,6 +10,14 @@
         padding: 20px;
         color: variables.$black;
 
+        a {
+            color: variables.$lightblue;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
         .card.residential h3::before { background-image: url('../assets/images/front-page/features/icon-residential.webp'); }
         .card.commercial h3::before { background-image: url('../assets/images/front-page/features/icon-commercial.webp'); }
         .card.faq h3::before { background-image: url('../assets/images/front-page/features/icon-faq.webp'); }

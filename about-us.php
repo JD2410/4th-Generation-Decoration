@@ -17,7 +17,7 @@ $harold = get_field('harold_canning');
         <?php if($main_text): ?>
             <?php echo $main_text; ?>
         <?php endif; ?>
-        <a href="#contact" class="primary-button button-anim about">Get in touch</a>
+        <a href="#contact" class="primary-button button-anim about hero">Get in touch</a>
     </div>
 </section>
 <section class="where">

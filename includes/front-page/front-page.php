@@ -29,7 +29,7 @@ $residential = get_field("residential");
                 <?php if($text): ?>
                     <p><?php echo $text; ?></p>
                 <?php endif; ?>
-                <a href="#contact" class="primary-button button-anim">Get in Touch</a>
+                <a href="#contact" class="primary-button button-anim hero">Get in Touch</a>
             </div>
         </div>
     </div>
@@ -38,21 +38,21 @@ $residential = get_field("residential");
 <section id="features">
     <div class="features--wrapper">
         <div class="card residential">
-            <h3>Residential Services</h3>
+            <h3>Domestic Services</h3>
             <?php if ($fea_residential) : ?>
-            <p><?php echo $fea_residential; ?></p>
+            <p><?php echo $fea_residential; ?> <a href="#residential">Learn More</a></p>
             <?php endif; ?>
         </div>
         <div class="card commercial">
             <h3>Commercial Services</h3>
             <?php if ($fea_commercial) : ?>
-            <p><?php echo $fea_commercial; ?></p>
+            <p><?php echo $fea_commercial; ?> <a href="#commercial">Learn More</a></p>
             <?php endif; ?>
         </div>
         <div class="card faq">
             <h3>FAQ</h3>
             <?php if ($fea_faq) : ?>
-            <p><?php echo $fea_faq; ?></p>
+            <p><?php echo $fea_faq; ?> <a href="#faq">Learn More</a></p>
             <?php endif; ?>
         </div>
     </div>
@@ -89,6 +89,7 @@ $residential = get_field("residential");
                 endif; 
                 ?>
                 <a href="#contact" class="primary-button">Get in Touch</a>
+                <a href="<?php echo site_url(); ?>/about-us/" class="primary-hollow-button">Find out more about us</a>
             </div>
         </div>
     </div>
@@ -103,7 +104,7 @@ $residential = get_field("residential");
                     <li>Property Refurbishments</li>
                 </ul>
                 <div class="section-head">
-                    <h2>Commerical</h2>
+                    <h2>Commercial</h2>
                     <h3>Expert Finishes for <span>Communal Areas, Offices, Schools, Hospitals and More...</span></h3>
                 </div>
             </div>
@@ -113,6 +114,7 @@ $residential = get_field("residential");
                     endif;
                 ?>
                 <a href="#contact" class="primary-button">Get in Touch</a>
+                <a href="<?php echo site_url(); ?>/commercial-services/" class="primary-hollow-button">See Offered Service</a>
             </div>
         </div>
         <div class="commercial--images">
@@ -141,7 +143,7 @@ $residential = get_field("residential");
                     <li>Fresh Coat for Doors</li>
                 </ul>
                 <div class="section-head">
-                    <h2>Residential</h2>
+                    <h2>Domestic</h2>
                     <h3>Beautifully <span>Decorated Homes,</span> Inside & Out</h3>
                 </div>
             </div>
@@ -151,6 +153,7 @@ $residential = get_field("residential");
                     endif;
                 ?>  
                 <a href="#contact" class="primary-button">Get in Touch</a>
+                <a href="<?php echo site_url(); ?>/domestic-services/" class="primary-hollow-button">See Offered Service</a>
             </div>
         </div>
     </div>

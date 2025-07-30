@@ -19,12 +19,13 @@
         top: -70px;
     }
     .about.even {
-        padding-top: 180px;
+        padding-top: 280px;
         .wrapper {
             grid-template-columns: 100fr;
 
             .text {
                 order: -1;
+                padding: 0;
             }
         }
         #profile-container.active  {
@@ -90,7 +91,7 @@
 
             #profile-images {
                 display: grid;
-                margin-top: -130px;
+                margin-top: -210px;
                 gap: 20px;
                 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
                 transition: grid-template-columns 0.75s, gap 0.75s;
@@ -100,7 +101,7 @@
 
                     position: relative;
                     background-repeat: no-repeat;
-                    height: 260px;
+                    height: 210px;
                     border-radius: 4px;
                     box-shadow: 0 2px 11px rgba(0, 0, 0, 0.29);
                     transition: opacity 0.75s, margin-top 0.75s, height 0.75s, box-shadow 0.75s;
@@ -208,9 +209,9 @@
 }
 @media (min-width: variables.$laptop-breakpoint) {
     .about.even {
-        padding-top: 130px;
+        padding: 150px 30px 60px;
         .wrapper {
-            grid-template-columns: 45fr 55fr;
+            grid-template-columns: 50fr 45fr;
 
             .text {
                 order: 0;
