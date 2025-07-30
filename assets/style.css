@@ -2497,7 +2497,7 @@ footer .footer--contact .email {
   font-weight: 500;
   display: inline-block;
   margin-bottom: 20px;
-  margin-right: 20px;
+  margin-right: 12px;
 }
 
 .primary-hollow-button {
@@ -2513,6 +2513,7 @@ footer .footer--contact .email {
   display: inline-block;
   margin-bottom: 20px;
   border: 2px solid #20B8E8;
+  margin-right: 12px;
 }
 
 .button-anim {

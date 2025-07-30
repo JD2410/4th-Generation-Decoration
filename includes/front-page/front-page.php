@@ -154,6 +154,7 @@ $residential = get_field("residential");
                 ?>  
                 <a href="#contact" class="primary-button">Get in Touch</a>
                 <a href="<?php echo site_url(); ?>/domestic-services/" class="primary-hollow-button">See Offered Service</a>
+                <a href="<?php echo site_url(); ?>/domestic-services/#gallery" class="primary-hollow-button">Project Gallery</a>
             </div>
         </div>
     </div>
