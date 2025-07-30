@@ -1,12 +1,13 @@
 @use "variables.scss";
 
 @use "header.scss";
-@use "contact.scss";
+@use "quick-contact.scss";
 @use "footer.scss";
 @use "front-page.scss";
 @use "domestic/domestic";
 @use "commercial/commercial";
 @use "aboutus/aboutus";
+@use "contact/contact";
 
 @use "error/errorpage.scss";
 @use "common.scss";

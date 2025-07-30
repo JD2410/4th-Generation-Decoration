@@ -2308,6 +2308,21 @@ footer .footer--contact .email {
     background-size: unset;
   }
 }
+@media (min-width: 768px) {
+  .page-template-contact-php .circles {
+    right: unset;
+    left: calc(50% - 786px);
+    top: -140px;
+  }
+  .page-template-contact-php .contact-section {
+    overflow: hidden;
+    position: relative;
+    background-color: #fafafa;
+  }
+  .page-template-contact-php .contact-section .contact .contact-wrapper .contact--form {
+    grid-row-start: 1;
+  }
+}
 .page-not-found {
   display: -webkit-box;
   display: -ms-flexbox;

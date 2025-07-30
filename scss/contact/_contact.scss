@@ -1,0 +1,22 @@
+@use '../variables';
+
+
+@media (min-width: variables.$mobile-breakpoint) {
+    .page-template-contact-php {
+
+        .circles {
+            right: unset;
+            left: calc(50% - 786px);
+            top: -140px;
+        }
+        .contact-section {
+            overflow: hidden;
+            position: relative;
+            background-color: #fafafa;
+
+            .contact .contact-wrapper .contact--form {
+                grid-row-start: 1;
+            }
+        }
+    }
+}
