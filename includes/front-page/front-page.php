@@ -16,7 +16,7 @@ $residential = get_field("residential");
 
 ?>
 <section id="hero">
-    <div class="hero--image">
+    <div class="hero--image animate-scroll">
         <div class="hero--container">
             <div class="hero--wrapper">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/logo-white.webp'; ?>" width="139" height="50" alt="4-Gen Decorating Logo">

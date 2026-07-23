@@ -5,6 +5,7 @@ window.onload = (event) => {
 
     const bodyClass = document.body.classList;
     scr.textExtension();
+    scr.scrollAnimation();
     if (bodyClass.contains('home')) {
         scr.testimonials.init();
         scr.faq.init();
@@ -156,5 +157,20 @@ let scr = {
                 }
             })
         })
-    }
+    },
+    scrollAnimation: () => {
+        const elements = document.querySelectorAll('.animate-scroll');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {entry.target.classList.add('visible');}
+            });
+        }, {
+            //The amount of screen displayed before animated. 0 is as soon as it appears on the page. 1 is a bit. 2 is...
+            threshold: 0.2
+        });
+
+        elements.forEach(element => {
+            observer.observe(element);
+        });
+    },
 }

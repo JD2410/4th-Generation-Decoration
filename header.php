@@ -8,7 +8,7 @@
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="wrapper" class="hfeed">
-    <header id="header" role="banner">
+    <header id="header" class="animate-scroll" role="banner">
         <div class='quick-contact--container'>
             <div class="quick-contact--wrapper">
                 <?php 
