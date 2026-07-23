@@ -65,7 +65,7 @@
 }
 .button-anim {
     border: 2px solid variables.$lightblue;
-    transition: color 0.45s, background-position 0.7s;
+    transition: color 0.45s, background-position 0.7s, opacity variables.$animation-speed, transform variables.$animation-speed;
     background-image: url("../assets/images/button-shape.svg");
     background-size: 150%;
     background-repeat: no-repeat;

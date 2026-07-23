@@ -21,7 +21,7 @@
                 width: 100%;
             }
 
-            sub {
+            .sub-text {
                 display: none;
             }
             p {
@@ -93,8 +93,8 @@
 
         .hero--wrapper {
 
-            sub {
-                display: unset; 
+            .sub-text {
+                display: block; 
             }
             h1 {
                 width: 57%;

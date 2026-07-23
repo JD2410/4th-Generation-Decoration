@@ -21,7 +21,7 @@ $residential = get_field("residential");
             <div class="hero--wrapper">
                 <img src="<?php echo get_template_directory_uri() . '/assets/images/logo-white.webp'; ?>" width="139" height="50" alt="4-Gen Decorating Logo">
                 <?php if($lead): ?>
-                    <sub><?php echo $lead; ?></sub>
+                    <div class="sub-text"><?php echo $lead; ?></div>
                 <?php endif; ?>
                 <?php if($main): ?>
                     <h1><?php echo $main; ?></h1>
@@ -29,7 +29,9 @@ $residential = get_field("residential");
                 <?php if($text): ?>
                     <p><?php echo $text; ?></p>
                 <?php endif; ?>
-                <a href="#contact" class="primary-button button-anim hero">Get in Touch</a>
+                <div class="anim-con">
+                    <a href="#contact" class="primary-button button-anim hero">Get in Touch</a>
+                </div>
             </div>
         </div>
     </div>
