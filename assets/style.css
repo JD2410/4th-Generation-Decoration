@@ -2765,6 +2765,89 @@ footer .footer--contact .email {
   #features.visible .card {
     opacity: 1;
   }
+  .animate-scroll.standard-animation .section-chip li {
+    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  .animate-scroll.standard-animation .section-chip li:nth-child(1) {
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  .animate-scroll.standard-animation .section-chip li:nth-child(2) {
+    -webkit-transition-delay: 0.8s;
+            transition-delay: 0.8s;
+  }
+  .animate-scroll.standard-animation .section-chip li:nth-child(3) {
+    -webkit-transition-delay: 1.4s;
+            transition-delay: 1.4s;
+  }
+  .animate-scroll.standard-animation .section-chip li:nth-child(3) {
+    -webkit-transition-delay: 2s;
+            transition-delay: 2s;
+  }
+  .animate-scroll.standard-animation img {
+    -webkit-transition: opacity 2.8s;
+    transition: opacity 2.8s;
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    -webkit-transition-delay: 0.2s;
+            transition-delay: 0.2s;
+  }
+  .animate-scroll.standard-animation h2 {
+    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    -webkit-transition-delay: 0.6s;
+            transition-delay: 0.6s;
+  }
+  .animate-scroll.standard-animation h3 {
+    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+  }
+  .animate-scroll.standard-animation p {
+    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
+    opacity: 0;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    -webkit-transition-delay: 1s;
+            transition-delay: 1s;
+  }
+  .animate-scroll.standard-animation .anim-container {
+    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
+    -webkit-transform: translateX(-10px);
+            transform: translateX(-10px);
+    opacity: 0;
+    -webkit-transition-delay: 1.6s;
+            transition-delay: 1.6s;
+  }
+  .animate-scroll.standard-animation.visible .section-chip li, .animate-scroll.standard-animation.visible img, .animate-scroll.standard-animation.visible h2, .animate-scroll.standard-animation.visible h3, .animate-scroll.standard-animation.visible p, .animate-scroll.standard-animation.visible a, .animate-scroll.standard-animation.visible .anim-container {
+    opacity: 1;
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 body {
   font-family: "Manrope", sans-serif;

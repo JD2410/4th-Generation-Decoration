@@ -60,7 +60,7 @@ $residential = get_field("residential");
     </div>
 </section>
 
-<section class="even about">
+<section class="even about animate-scroll standard-animation">
     <a id="about"></a>
     <div class="wrapper">
         <div class="images" id="profile-container">
@@ -90,13 +90,16 @@ $residential = get_field("residential");
                     echo $about;
                 endif; 
                 ?>
-                <a href="#contact" class="primary-button">Get in Touch</a>
-                <a href="<?php echo site_url(); ?>/about-us/" class="primary-hollow-button">Find out more about us</a>
+                <div class="anim-container">
+                    <a href="#contact" class="primary-button">Get in Touch</a>
+                    <a href="<?php echo site_url(); ?>/about-us/" class="primary-hollow-button">Find out more about us</a>
+                </div>
+                
             </div>
         </div>
     </div>
 </section>
-<section class="commercial-home">
+<section class="commercial-home animate-scroll standard-animation">
     <a id="commercial"></a>
     <div class="commercial--wrapper">
         <div class="commercial--text">
@@ -115,8 +118,11 @@ $residential = get_field("residential");
                     echo $commercial; 
                     endif;
                 ?>
-                <a href="#contact" class="primary-button">Get in Touch</a>
-                <a href="<?php echo site_url(); ?>/commercial-services/" class="primary-hollow-button">See Offered Service</a>
+                <div class="anim-container">
+                    <a href="#contact" class="primary-button">Get in Touch</a>
+                    <a href="<?php echo site_url(); ?>/commercial-services/" class="primary-hollow-button">See Offered Service</a> 
+                </div>
+                
             </div>
         </div>
         <div class="commercial--images">
@@ -124,7 +130,7 @@ $residential = get_field("residential");
         </div>
     </div>
 </section>
-<section class="even residential">
+<section class="even residential animate-scroll standard-animation">
     <a id="residential" ></a>
     <div class="wrapper">
         <div class="images">
@@ -154,9 +160,12 @@ $residential = get_field("residential");
                     echo $residential; 
                     endif;
                 ?>  
-                <a href="#contact" class="primary-button">Get in Touch</a>
-                <a href="<?php echo site_url(); ?>/domestic-services/" class="primary-hollow-button">See Offered Service</a>
-                <a href="<?php echo site_url(); ?>/domestic-services/#gallery" class="primary-hollow-button">Project Gallery</a>
+                <div class="anim-container">
+                    <a href="#contact" class="primary-button">Get in Touch</a>
+                    <a href="<?php echo site_url(); ?>/domestic-services/" class="primary-hollow-button">See Offered Service</a>
+                    <a href="<?php echo site_url(); ?>/domestic-services/#gallery" class="primary-hollow-button">Project Gallery</a>
+                </div>
+                
             </div>
         </div>
     </div>
