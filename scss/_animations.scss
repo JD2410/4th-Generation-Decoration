@@ -24,7 +24,7 @@
         ul li { opacity: 1; }
     }
 
-    #hero .hero--image {
+    #hero  {
         opacity: 0;
         transition: opacity variables.$animation-speed;
         transition-delay: 0.4s;
@@ -48,14 +48,14 @@
                     transform variables.$animation-speed;
                 opacity: 0;
                 transform: translateX(-20px);
-                transition-delay: 1.4s;
+                transition-delay: 1.3s;
 
                 span {
                     transition: 
                         opacity variables.$animation-speed,
                         transform variables.$animation-speed;
                     opacity: 0;
-                    transition-delay: 1.8s;
+                    transition-delay: 1.6s;
                     transform: translateX(-20px);
 
                 }
@@ -66,7 +66,7 @@
                     opacity variables.$animation-speed,
                     transform variables.$animation-speed;
                 opacity: 0;
-                transition-delay: 2.2s;
+                transition-delay: 1.9s;
                 transform: translateX(-20px);
             }
             .anim-con {
@@ -75,7 +75,7 @@
                     transform variables.$animation-speed;
                 opacity: 0;
                 transform: translateX(-20px);
-                transition-delay: 2.6s;
+                transition-delay: 2.2s;
             }
         }
 
@@ -83,6 +83,31 @@
             .sub-text, p, .anim-con, h1, h1 span {
                 opacity: 1;
                 transform: translateX(0)
+            }
+        }
+    }
+
+    #features {
+        
+        .card {
+            transition: 
+                    opacity variables.$animation-speed;
+            opacity: 0.0;
+
+            &:nth-child(1) {
+                transition-delay: 0.8s;
+            }
+            &:nth-child(2) {
+                transition-delay: 1.2s;
+            }
+            &:nth-child(3) {
+                transition-delay: 1.6s;
+            }
+        }
+
+        &.visible {
+            .card {
+                opacity: 1;
             }
         }
     }
