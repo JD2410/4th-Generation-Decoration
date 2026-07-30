@@ -203,6 +203,30 @@
 
     // Standard animation setup
     .animate-scroll.standard-animation {
+
+        &.hero-area {
+            transition: opacity variables.$animation-speed;
+            opacity: 0;
+
+            h1, p {
+                transition: opacity variables.$animation-speed,
+                transform variables.$animation-speed;
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            p {
+                transition-delay: 0.4s;
+            }
+            .anim-container { transition-delay: 0.8s;}
+            &.visible {
+                opacity: 1;
+                h1, p {
+                    opacity: 1;
+                    transform: translateX(0px);
+                }
+            }
+        }
+        // Currently only on the home page
         .section-chip li {
             transition: opacity variables.$animation-speed,
                 transform variables.$animation-speed;
@@ -214,6 +238,7 @@
             &:nth-child(3) { transition-delay: 1.4s; }
             &:nth-child(3) { transition-delay: 2s; }
         }
+        // Standard assets in block
         img {
             transition: opacity variables.$animation-speed+2;
             opacity: 0;

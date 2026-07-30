@@ -10,17 +10,19 @@ $harold = get_field('harold_canning');
 
 ?>
 <?php get_header(); ?>
-<section class="about-us-section hero-area">
+<section class="about-us-section animate-scroll standard-animation hero-area ">
     <span class="circles"></span>
     <div class="about-container">
         <h1>Our Roots</h1>
         <?php if($main_text): ?>
             <?php echo $main_text; ?>
         <?php endif; ?>
-        <a href="#contact" class="primary-button button-anim about hero">Get in touch</a>
+        <div class="anim-container">
+            <a href="#contact" class="primary-button button-anim about hero">Get in touch</a>
+        </div>
     </div>
 </section>
-<section class="where">
+<section class="where animate-scroll standard-animation">
     <div class="gen-container">
         <div class="where-contents">
             <h2>Where we come from</h2>
@@ -37,7 +39,7 @@ $harold = get_field('harold_canning');
 <section class="generations">
     <div class="gen-container">
         <h1>4 Generations of <span>Decorators</span></h1>
-        <article class="sean-canning profile">
+        <article class="sean-canning profile animate-scroll standard-animation">
             <div>
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/our-roots/sean-canning.png" ?>" alt="">
             </div>
@@ -48,7 +50,7 @@ $harold = get_field('harold_canning');
                 <?php endif; ?>
             </div>
         </article>
-        <article class="jason-canning profile">
+        <article class="jason-canning profile animate-scroll standard-animation">
             <div>
                 <h2>Jason Canning (3rd Generation)</h2>
                 <?php if($jason): ?>
@@ -59,7 +61,7 @@ $harold = get_field('harold_canning');
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/our-roots/jason-canning.png" ?>" alt="">
             </div>
         </article>
-        <article class="keith-canning profile">
+        <article class="keith-canning profile animate-scroll standard-animation">
             <div>
                 <img src="<?php echo get_template_directory_uri() . "/assets/images/our-roots/keith-canning.png" ?>" alt="">
             </div>
@@ -70,7 +72,7 @@ $harold = get_field('harold_canning');
                 <?php endif; ?>
             </div>
         </article>
-        <article class="harold-canning profile">
+        <article class="harold-canning profile animate-scroll standard-animation">
             <div>
                 <h2>Harold Canning (1st Generation)</h2>
                 <?php if($keith): ?>
