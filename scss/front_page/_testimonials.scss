@@ -73,21 +73,3 @@
         }
     }
 }
-@media (min-width: variables.$mobile-breakpoint) {
-    #testimonials.animated .testimonials--wrapper:before, #testimonials.animated .testimonials--wrapper:after {
-        content: "";
-        width: 40px;
-        height: 100%;
-        position: absolute;
-        background: linear-gradient(90deg, #fafafa 0% 30%, #fafafa00);
-        top: 0;
-    }
-    #testimonials.animated .testimonials--wrapper:before {
-        left: 0;
-    }
-    #testimonials.animated .testimonials--wrapper:after {
-        right: 0;
-        rotate: 180deg;
-    }
-    
-}

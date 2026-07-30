@@ -1,4 +1,4 @@
-<section class="contact">
+<section class="contact animate-scroll">
     <a id="contact"></a>
     <div class="contact-wrapper">
         <div class="contact--description">

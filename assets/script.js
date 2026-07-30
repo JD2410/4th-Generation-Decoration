@@ -42,7 +42,6 @@ let scr = {
 
             imagesToHover.forEach((ele) => {
                 ele.addEventListener("mouseenter", () => {
-                    //container.classList.add(ele.dataset.conclass)
                     scr.profileImages.changeSelection(ele.dataset.conclass)
                 })
             })

@@ -1315,24 +1315,6 @@ footer .footer--contact .email {
   padding: 12px 0;
 }
 
-@media (min-width: 768px) {
-  #testimonials.animated .testimonials--wrapper:before, #testimonials.animated .testimonials--wrapper:after {
-    content: "";
-    width: 40px;
-    height: 100%;
-    position: absolute;
-    background: -webkit-gradient(linear, left top, right top, from(#fafafa), to(rgba(250, 250, 250, 0)));
-    background: linear-gradient(90deg, #fafafa 0% 30%, rgba(250, 250, 250, 0));
-    top: 0;
-  }
-  #testimonials.animated .testimonials--wrapper:before {
-    left: 0;
-  }
-  #testimonials.animated .testimonials--wrapper:after {
-    right: 0;
-    rotate: 180deg;
-  }
-}
 #faq {
   position: absolute;
   top: -60px;
@@ -2764,6 +2746,112 @@ footer .footer--contact .email {
   }
   #features.visible .card {
     opacity: 1;
+  }
+  #testimonials.animate-scroll .testimonial--card {
+    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  #testimonials.animate-scroll .testimonial--card:nth-child(2) {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+  #testimonials.animate-scroll .testimonial--card:nth-child(3) {
+    -webkit-transition-delay: 0.7s;
+            transition-delay: 0.7s;
+  }
+  #testimonials.animate-scroll .testimonial--card:nth-child(4) {
+    -webkit-transition-delay: 0.9s;
+            transition-delay: 0.9s;
+  }
+  #testimonials.animate-scroll.visible .testimonial--card {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .contact.animate-scroll .contact--description h2, .contact.animate-scroll .contact--description h3, .contact.animate-scroll .contact--description p, .contact.animate-scroll .contact--description a {
+    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
+    opacity: 0;
+    -webkit-transform: translateX(-20px);
+            transform: translateX(-20px);
+  }
+  .contact.animate-scroll .contact--description h3 {
+    -webkit-transition-delay: 0.3s;
+            transition-delay: 0.3s;
+  }
+  .contact.animate-scroll .contact--description p {
+    -webkit-transition-delay: 0.6s;
+            transition-delay: 0.6s;
+  }
+  .contact.animate-scroll .contact--description a:nth-child(1) {
+    -webkit-transition-delay: 0.9s;
+            transition-delay: 0.9s;
+  }
+  .contact.animate-scroll .contact--description a:nth-child(2) {
+    -webkit-transition-delay: 1.1s;
+            transition-delay: 1.1s;
+  }
+  .contact.animate-scroll .contact--form {
+    -webkit-transition: opacity 0.8s;
+    transition: opacity 0.8s;
+    opacity: 0;
+  }
+  .contact.animate-scroll.visible .contact--description h2, .contact.animate-scroll.visible .contact--description h3, .contact.animate-scroll.visible .contact--description p, .contact.animate-scroll.visible .contact--description a {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+  .contact.animate-scroll.visible .contact--form {
+    opacity: 1;
+  }
+  .faq .faq--wrapper.animate-scroll .faq--qa {
+    -webkit-transition: opacity 0.8s;
+    transition: opacity 0.8s;
+    opacity: 0;
+  }
+  .faq .faq--wrapper.animate-scroll .faq--qa:nth-child(2) {
+    -webkit-transition-delay: 0.4s;
+            transition-delay: 0.4s;
+  }
+  .faq .faq--wrapper.animate-scroll .faq--qa:nth-child(3) {
+    -webkit-transition-delay: 0.7s;
+            transition-delay: 0.7s;
+  }
+  .faq .faq--wrapper.animate-scroll .faq--qa:nth-child(4) {
+    -webkit-transition-delay: 0.9s;
+            transition-delay: 0.9s;
+  }
+  .faq .faq--wrapper.animate-scroll.visible .faq--qa {
+    opacity: 1;
+  }
+  #map.animate-scroll {
+    -webkit-transition: opacity 1.8s;
+    transition: opacity 1.8s;
+    opacity: 0;
+  }
+  #map.animate-scroll.visible {
+    opacity: 1;
+  }
+  .map--message.animate-scroll {
+    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, -webkit-transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s;
+    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
+    opacity: 0;
+    -webkit-transform: translateX(20px);
+            transform: translateX(20px);
+  }
+  .map--message.animate-scroll.visible {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
   }
   .animate-scroll.standard-animation .section-chip li {
     -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;

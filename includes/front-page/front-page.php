@@ -170,7 +170,7 @@ $residential = get_field("residential");
         </div>
     </div>
 </section>
-<section id="testimonials" class="animated">
+<section id="testimonials" class="animate-scroll">
     <div class="testimonials--wrapper">
         <h2>Brushstrokes of Praise</h2>
         <div id="testimonialsgroup" class="transition">
@@ -191,7 +191,7 @@ $residential = get_field("residential");
 </section>
 <section class="faq">
     <a id="faq"></a>
-    <div class="faq--wrapper">
+    <div class="faq--wrapper animate-scroll">
         <h2>Frequently asked questions</h2>
         <div>
             <?php
@@ -212,10 +212,10 @@ $residential = get_field("residential");
     </div>
 </section>
 
-<div id="map"></div>
-<div id="location-radius">
+<div id="map" class="animate-scroll"></div>
+<div id="location-radius" >
     <div class="map--wrapper">
-        <div class="map--message">
+        <div class="map--message animate-scroll">
             <h3>Quality Decorating, <span>Wide Coverage</span></h3>
             <p>Our team provides expert painting and decorating services across a wide area, ensuring homes and businesses receive a high-quality finish. The map shows our general coverage, but we're always happy to discuss projects slightly beyond. If you're unsure whether we serve your location, just get in touch—we'll do our best to accommodate you!</p>
         </div>
