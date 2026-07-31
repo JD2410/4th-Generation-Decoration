@@ -6,6 +6,7 @@ window.onload = (event) => {
     const bodyClass = document.body.classList;
     scr.textExtension();
     scr.scrollAnimation();
+    scr.listTranstionDelaySet()
     if (bodyClass.contains('home')) {
         scr.testimonials.init();
         scr.faq.init();
@@ -27,6 +28,20 @@ let scr = {
                 })
             ))
         }
+    },
+    listTranstionDelaySet() {
+        let animateContainers = document.querySelectorAll('ul.animate')
+        animateContainers.forEach(element => {
+            let animationProperties = {
+                speed: 0.1,
+                counter: 0.2
+            }
+            let listItem = element.querySelectorAll("li")
+            listItem.forEach(liele => {
+                liele.style.transitionDelay = animationProperties.counter + 's';
+                animationProperties.counter += animationProperties.speed; 
+            })
+        })
     },
     profileImages: {
         init: () => {
@@ -53,15 +68,20 @@ let scr = {
         }
     },
     testimonials: {
-        init: () => {
-            if(document.querySelectorAll('.testimonial--card').length > 4) {
-                setInterval(scr.testimonials.movingTestimonials, 2000)
-            } else {
-                document.getElementById("testimonials").classList.remove("animated")
+        init() {
+            this.transitionDelaySet()
+        },
+        transitionDelaySet() {
+            let animationProperties = {
+                speed: 0.3,
+                counter: 0.4
             }
+            document.querySelectorAll('.testimonial--card').forEach(element => {
+                element.style.transitionDelay = animationProperties.counter + 's';
+                animationProperties.counter += animationProperties.speed; 
+            })
         },
         movingTestimonials: () => {
-
             let container = document.getElementById("testimonialsgroup")
             if (container.classList.contains("next")) {
                 container.classList.remove('transition')
@@ -71,13 +91,18 @@ let scr = {
                 container.classList.add('transition')
                 container.classList.add("next")
             }
-
         }
     },
     faq: {
         init: () => {
-            let qa = document.querySelectorAll(".faq--qa")
+            let qa = document.querySelectorAll(".faq--qa");
+            let animationProperties = {
+                speed: 0.3,
+                counter: 0.4
+            }
             qa.forEach((element) => {
+                element.style.transitionDelay = animationProperties.counter + 's';
+                animationProperties.counter += animationProperties.speed; 
                 element.onclick = () => {
                     let $answer = element.querySelector(".faq--answer .faq--answer-ele");
                     if (!element.classList.contains("open")) {
