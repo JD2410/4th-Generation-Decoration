@@ -6,7 +6,7 @@ $service_text = get_field('domestic_services_text');
 
 ?>
 <?php get_header(); ?>
-<section class="domestic hero-area">
+<section class="domestic hero-area animate-scroll standard-animation">
     <span class="circles"></span>
     <div id="domesticContainer">
         <h1>Domestic Services</h1>
@@ -14,14 +14,14 @@ $service_text = get_field('domestic_services_text');
             <?php echo $main_text; ?>
         <?php endif; ?>
         <div class="more-text" data-extend="domesticContainer">more...</div>
-        <div class="actions">
+        <div class="actions anim-container">
             <a href="#contact" class="primary-button button-anim hero">Get in touch</a>
             <a href="#gallery" class="primary-button button-anim-inverse hero">Our Work</a>
         </div>
     </div>
 </section>
 <section class="domestic-services">
-    <div class="services--container">
+    <div class="services--container animate-scroll standard-animation">
         <h2>Services</h2>
         <?php if($service_text): ?>
             <?php echo $service_text; ?>
@@ -29,8 +29,7 @@ $service_text = get_field('domestic_services_text');
         <div class="listed-services">
             <div class="interior-services">
                 <h3>Interior Decorating</h3>
-                
-                <ul>
+                <ul class="animate">
                     <?php
                     $query = new WP_Query( array( 'category_name' => 'Domestic Interior Service', 'posts_per_page' => 100 ) );
                     $interior = $query->posts;
@@ -42,7 +41,7 @@ $service_text = get_field('domestic_services_text');
             </div>
             <div class="exterior-services">
                 <h3>Exterior Decorating</h3>
-                <ul>
+                <ul class="animate">
                     <?php
                     $query = new WP_Query( array( 'category_name' => 'Domestic Exterior Service', 'posts_per_page' => 100 ) );
                     $interior = $query->posts;
@@ -57,7 +56,7 @@ $service_text = get_field('domestic_services_text');
     </div>
 </section>
 <section class="domestic-gallery">
-    <div class="gallery--container">
+    <div class="gallery--container animate-scroll standard-animation">
         <a id="gallery"></a>
         <h2>Transforming Spaces, Creating Smiles!</h2>
         <p>We believe every space has the potential to shine, and our decorator's expertise makes it happen! Check out these incredible before-and-after transformations that showcase the care, creativity, and craftsmanship we bring to every project. Whether it's a cozy home or a bustling business, we're here to turn your vision into reality.</p>
