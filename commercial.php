@@ -6,7 +6,7 @@ $service_text = get_field('commercial_services_text');
 
 ?>
 <?php get_header(); ?>
-<section class="commercial hero-area">
+<section class="commercial hero-area animate-scroll standard-animation">
     <span class="circles"></span>
     <div id="commercialContainer">
         <h1>Commercial Services</h1>
@@ -14,13 +14,13 @@ $service_text = get_field('commercial_services_text');
             <?php echo $main_text; ?>
         <?php endif; ?>
         <div class="more-text" data-extend="commercialContainer">more...</div>
-        <div class="actions">
+        <div class="actions anim-container">
             <a href="#contact" class="primary-button button-anim hero">Get in touch</a>
         </div>
     </div>
 </section>
 <section class="commercial-services">
-    <div class="services--container">
+    <div class="services--container animate-scroll standard-animation">
         <div class="services--introduction">
             <h2>Services</h2>
             <?php if($service_text): ?>
@@ -30,7 +30,7 @@ $service_text = get_field('commercial_services_text');
         <div class="listed-services">
             <div class="interior-services">
                 <h3>Interior Decorating</h3>
-                <ul>
+                <ul class="animate">
                     <?php
                     $query = new WP_Query( array( 'category_name' => 'Commercial Interior Service', 'posts_per_page' => 100 ) );
                     $interior = $query->posts;
@@ -42,7 +42,7 @@ $service_text = get_field('commercial_services_text');
             </div>
             <div class="exterior-services">
                 <h3>Exterior Decorating</h3>
-                <ul>
+                <ul class="animate">
                     <?php
                     $query = new WP_Query( array( 'category_name' => 'Commercial Exterior Service', 'posts_per_page' => 100 ) );
                     $interior = $query->posts;
