@@ -4,22 +4,13 @@
     position: absolute;
     top: -60px;
 }
-.about .wrapper .text .section-head {
-    justify-content: flex-end;
-    flex-direction: column;
-    align-items: flex-start;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center top;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgb(0, 0, 0)), url('../assets/images/front-page/team-profile/mobile-about.webp');
-}
 
 @media (min-width: variables.$mobile-breakpoint) {
     #about {
         top: -70px;
     }
     .about.even {
-        padding-top: 280px;
+
         .wrapper {
             grid-template-columns: 100fr;
 
@@ -171,7 +162,6 @@
 }
 @media ((min-width: variables.$laptop-breakpoint) and (max-width: 1255px)) {
     .about.even {
-        padding-top: 150px;
         #profile-container {
             
             #profile-images {
@@ -209,7 +199,7 @@
 }
 @media (min-width: variables.$laptop-breakpoint) {
     .about.even {
-        padding: 150px 30px 60px;
+
         .wrapper {
             grid-template-columns: 50fr 45fr;
 

@@ -59,7 +59,7 @@ $residential = get_field("residential");
     </div>
 </section>
 
-<section class="even about animate-scroll standard-animation">
+<section class="homeblock even about animate-scroll standard-animation">
     <a id="about"></a>
     <div class="wrapper">
         <div class="images" id="profile-container">
@@ -98,11 +98,11 @@ $residential = get_field("residential");
         </div>
     </div>
 </section>
-<section class="commercial-home animate-scroll standard-animation">
+<section class="homeblock commercial-home animate-scroll standard-animation">
     <a id="commercial"></a>
-    <div class="commercial--wrapper">
-        <div class="commercial--text">
-            <div class="commercial--lead-text">
+    <div class="wrapper">
+        <div class="text">
+            <div class="lead-text">
                 <ul class="section-chip">
                     <li>Office Renovations</li>
                     <li>Property Refurbishments</li>
@@ -112,7 +112,7 @@ $residential = get_field("residential");
                     <h3>Expert Finishes for <span>Communal Areas, Offices, Schools, Hospitals and More...</span></h3>
                 </div>
             </div>
-            <div class="commercial--text-content">
+            <div class="text-content">
                 <?php if ($commercial) : 
                     echo $commercial; 
                     endif;
@@ -124,12 +124,12 @@ $residential = get_field("residential");
                 
             </div>
         </div>
-        <div class="commercial--images">
+        <div class="images">
             <img src="<?php echo get_template_directory_uri() . "/assets/images/front-page/commercial/commercial-office.webp" ?>" alt="Ofices">
         </div>
     </div>
 </section>
-<section class="even residential animate-scroll standard-animation">
+<section class="homeblock even residential animate-scroll standard-animation">
     <a id="residential" ></a>
     <div class="wrapper">
         <div class="images">

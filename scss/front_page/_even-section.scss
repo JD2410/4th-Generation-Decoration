@@ -1,38 +1,28 @@
 @use '../variables';
 
-.even {
-    background-image: url("../assets/images/texture-circle-pattern.svg");
-    background-repeat: no-repeat;
-    position: relative;
+.homeblock {
+    padding: 20px;
 
+    &.commercial-home {
+        background-color: #FAFAFA;
+    }
     .images {
         display: none;
     }
-    .text {
-        .text-lead {
-            display: flex;
-            flex-direction: column-reverse;
-        }
-        .text-content {
-            margin: 0 20px;
-            line-height: 1.3;
-            p {
-                margin-bottom: 20px;
-            }
-        }
-    }
 }
-
 @media (min-width: variables.$mobile-breakpoint) {
-    #content .even .wrapper .text .section-head  {
-        background-image: unset
-    }
-    .even {
+    .homeblock {
+        padding: 50px 30px;
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 40px 30px;
+        background-image: url("../assets/images/texture-circle-pattern.svg");
+        background-repeat: no-repeat;
+        position: relative;
 
+        &.commercial-home {
+            background-image: unset;
+        }
         .images {
             display: unset;
             img {
@@ -48,11 +38,8 @@
             .text {
                 padding: 0 20px;
                 .text-lead {
+                    display: flex;
                     flex-direction: column;
-                }
-                .text-content {
-                    margin: 0;
-                    line-height: 1.75;
                 }
             }
         }
@@ -60,8 +47,7 @@
     
 }
 @media (min-width: variables.$laptop-breakpoint) {
-    .even {
-
+    .homeblock {
         .wrapper {
             grid-template-columns: 42fr 36fr;
             align-items: center;
