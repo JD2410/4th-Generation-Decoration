@@ -497,18 +497,49 @@ footer .footer--contact .email {
     background-image: url("../assets/images/icon-white-email.webp");
   }
 }
+#hero::before,
+#hero::after,
+.hero--image::before {
+  content: "";
+  display: block;
+  border: 40px solid rgba(163, 163, 163, 0.0784313725);
+  border-radius: 50%;
+  position: absolute;
+  z-index: 0;
+}
+
+#hero::before {
+  width: 190px;
+  height: 190px;
+  left: 0px;
+  top: 70px;
+}
+
+#hero::after {
+  width: 430px;
+  height: 430px;
+  left: -130px;
+  top: -50px;
+}
+
+.hero--image::before {
+  width: 700px;
+  height: 700px;
+  left: -270px;
+  top: -205px;
+}
+
 #hero {
   background-color: #FAFAFA;
+  overflow: hidden;
 }
 #hero .hero--image {
   background-repeat: no-repeat;
-  background-image: url("../assets/images/front-page/hero/mobile-hero.webp");
-  color: #fff;
+  color: #49494C;
   background-size: cover;
 }
 #hero .hero--image .hero--container {
-  min-height: calc(100vh - 62px);
-  padding: 30px 30px 170px;
+  padding: 80px 80px 170px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -519,6 +550,8 @@ footer .footer--contact .email {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  z-index: 1;
 }
 #hero .hero--image .hero--container .hero--wrapper {
   max-width: 1400px;
@@ -539,19 +572,18 @@ footer .footer--contact .email {
   font-size: 1.5em;
 }
 #hero .hero--image .hero--container h1 span {
-  color: #fff;
+  color: #49494C;
   display: block;
 }
 
 @media (min-width: 768px) {
+  #hero {
+    position: relative;
+  }
   #hero::before,
   #hero::after,
   .hero--image::before {
-    content: "";
-    display: block;
     border: 70px solid rgba(163, 163, 163, 0.0784313725);
-    border-radius: 50%;
-    position: absolute;
   }
   #hero::before {
     width: 790px;
@@ -571,10 +603,6 @@ footer .footer--contact .email {
     left: calc(50% - 451px);
     top: -541px;
   }
-  #hero {
-    overflow: hidden;
-    position: relative;
-  }
   #hero .hero--image {
     background-image: url("../assets/images/front-page/hero/hero-image.png");
     background-position: calc(50% + 400px) -150px;
@@ -587,10 +615,7 @@ footer .footer--contact .email {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding-bottom: 100px;
-    min-height: unset;
-    position: relative;
-    z-index: 1;
+    padding: 30px 30px 100px 30px;
   }
   #hero .hero--image .hero--container .hero--wrapper .sub-text {
     display: block;
@@ -599,9 +624,6 @@ footer .footer--contact .email {
     width: 57%;
     font-size: 2.3em;
     margin: 10px 0;
-  }
-  #hero .hero--image .hero--container .hero--wrapper h1 span {
-    color: #49494C;
   }
   #hero .hero--image .hero--container .hero--wrapper p {
     font-size: 1.15em;
