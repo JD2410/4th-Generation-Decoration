@@ -1,10 +1,17 @@
 @use '../variables';
 
 #features {
-    margin-top: -15vh;
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 10;
+    overflow-x: auto;
 
     .features--wrapper {
         display: grid;
+        grid-template-columns: 60% 60% 60%;
+        padding: 0;
         gap: 20px;
         max-width: variables.$maxwidth;
         padding: 20px;
@@ -59,17 +66,11 @@
 
     #features {
         margin-top: -120px;
-        display: flex;
-        justify-content: center;
-        padding: 20px 30px;
-        position: absolute;
+        padding: 20px 0px;
         width: 100%;
-        z-index: 10;
 
         .features--wrapper {
             grid-template-columns: 1fr 1fr 1fr;
-            padding: 0;
-
             .card {
                 gap: 0px;
                 
