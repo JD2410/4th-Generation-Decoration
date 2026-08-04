@@ -5,19 +5,36 @@
 
     p {
         line-height: 1.6em;
+        margin-bottom: 20px;
+    }
+    h3 {
+        margin-bottom: 20px;
     }
     .images {
         display: none;
     }
+    
     &.commercial-home {
         background-color: #FAFAFA;
+
+        .section-head:before {
+            content: "";
+            display: block;
+            padding-bottom: 80%;
+            width: 100%;
+            border-radius: 8px;
+            background-image: url("../assets/images/front-page/commercial/mobile-commercial.webp");
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+        }
     }
 
     &.about {
         .section-head:before {
             content: "";
             display: block;
-            padding-bottom: 100%;
+            padding-bottom: 80%;
             width: 100%;
             border-radius: 8px;
             background-image: url("../assets/images/front-page/team-profile/the-team-mobile.png");
@@ -26,9 +43,22 @@
             margin-bottom: 20px;
         }
     }
-    h3 {
-        margin-bottom: 20px;
+
+    &.residential {
+
+        .section-head:before {
+            content: "";
+            display: block;
+            padding-bottom: 80%;
+            width: 100%;
+            border-radius: 8px;
+            background-image: url("../assets/images/front-page/domestic/mobile-domestic.webp");
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+        }
     }
+    
 }
 @media (min-width: variables.$mobile-breakpoint) {
     .homeblock {
@@ -40,9 +70,15 @@
         background-repeat: no-repeat;
         position: relative;
 
-
+        &.about .section-head:before {
+            display: none;
+        }
         &.commercial-home {
             background-image: unset;
+            .section-head:before { display: none; }
+        }
+        &.residential .section-head:before {
+            display: none;
         }
         .images {
             display: unset;

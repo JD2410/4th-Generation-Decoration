@@ -42,13 +42,13 @@
     text-decoration: none;
     transition: background-color 0.5s;
     text-align: center;
-    padding: 10px 21px;
     border-radius: 8px;
     font-weight: 500;
     display: inline-block;
     margin-bottom: 20px;
     margin-right: 12px;
     width: 100%;
+    padding: 16px 21px;
 }
 .primary-hollow-button {
     background-color: #fff;
@@ -63,6 +63,8 @@
     margin-bottom: 20px;
     border: 2px solid variables.$lightblue;
     margin-right: 12px;
+    width: 100%;
+    padding: 16px 21px;
 }
 .button-anim {
     border: 2px solid variables.$lightblue;
@@ -97,6 +99,11 @@
         display: inline-block;
         font-size: 1.1em;
         width: unset;
+        padding: 10px 21px;
+    }
+    .primary-hollow-button {
+        width: unset;
+        padding: 10px 21px;
     }
     .primary-button:not(.button-anim):not(.button-anim-inverse) {
         transition: box-shadow 0.25s, background-color 0.25s, color 0.25s;
