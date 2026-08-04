@@ -6,6 +6,25 @@
     display: flex;
     justify-content: center;
 
+    .mybuilder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: variables.$black;
+        text-decoration: none;
+        margin-top: 30px;
+        transition: color 0.3s;
+        gap: 10px;
+
+        img {
+            max-width: 186px;
+        }
+
+        &:hover {
+            color: variables.$lightblue;
+        }
+    }
+
     .testimonials--wrapper {
         max-width: variables.$maxwidth;
         overflow: hidden;
@@ -71,5 +90,12 @@
                 }
             }
         }
+    }
+}
+@media (min-width: variables.$mobile-breakpoint) {
+
+    #testimonials .mybuilder {
+        flex-direction: row;
+        justify-content: center;
     }
 }
