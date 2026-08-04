@@ -30,7 +30,7 @@
 #hero {
     background-color: #FAFAFA;
     overflow: hidden;
-
+    position: relative;
     
     .hero--image {
         background-repeat: no-repeat;
@@ -38,7 +38,7 @@
         background-size: cover;
 
         .hero--container {
-            padding: 80px 80px 170px 30px;
+            padding: 80px 30px 170px 30px;
             display: flex;
             flex-direction: column;
             justify-content: center;

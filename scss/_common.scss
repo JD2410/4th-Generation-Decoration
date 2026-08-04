@@ -48,6 +48,7 @@
     display: inline-block;
     margin-bottom: 20px;
     margin-right: 12px;
+    width: 100%;
 }
 .primary-hollow-button {
     background-color: #fff;
@@ -95,6 +96,7 @@
     .primary-button {
         display: inline-block;
         font-size: 1.1em;
+        width: unset;
     }
     .primary-button:not(.button-anim):not(.button-anim-inverse) {
         transition: box-shadow 0.25s, background-color 0.25s, color 0.25s;

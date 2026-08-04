@@ -3,11 +3,31 @@
 .homeblock {
     padding: 20px;
 
-    &.commercial-home {
-        background-color: #FAFAFA;
+    p {
+        line-height: 1.6em;
     }
     .images {
         display: none;
+    }
+    &.commercial-home {
+        background-color: #FAFAFA;
+    }
+
+    &.about {
+        .section-head:before {
+            content: "";
+            display: block;
+            padding-bottom: 100%;
+            width: 100%;
+            border-radius: 8px;
+            background-image: url("../assets/images/front-page/team-profile/the-team-mobile.png");
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 20px;
+        }
+    }
+    h3 {
+        margin-bottom: 20px;
     }
 }
 @media (min-width: variables.$mobile-breakpoint) {
@@ -19,6 +39,7 @@
         background-image: url("../assets/images/texture-circle-pattern.svg");
         background-repeat: no-repeat;
         position: relative;
+
 
         &.commercial-home {
             background-image: unset;
@@ -35,6 +56,7 @@
             display: grid;
             gap: 30px;
             max-width: variables.$maxwidth;
+
             .text {
                 padding: 0 20px;
                 .text-lead {

@@ -532,6 +532,7 @@ footer .footer--contact .email {
 #hero {
   background-color: #FAFAFA;
   overflow: hidden;
+  position: relative;
 }
 #hero .hero--image {
   background-repeat: no-repeat;
@@ -539,7 +540,7 @@ footer .footer--contact .email {
   background-size: cover;
 }
 #hero .hero--image .hero--container {
-  padding: 80px 80px 170px 30px;
+  padding: 80px 30px 170px 30px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -693,11 +694,28 @@ footer .footer--contact .email {
 .homeblock {
   padding: 20px;
 }
-.homeblock.commercial-home {
-  background-color: #FAFAFA;
+.homeblock p {
+  line-height: 1.6em;
 }
 .homeblock .images {
   display: none;
+}
+.homeblock.commercial-home {
+  background-color: #FAFAFA;
+}
+.homeblock.about .section-head:before {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+  width: 100%;
+  border-radius: 8px;
+  background-image: url("../assets/images/front-page/team-profile/the-team-mobile.png");
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+.homeblock h3 {
+  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {
@@ -998,7 +1016,7 @@ footer .footer--contact .email {
   }
 }
 #features {
-  margin-top: -100px;
+  margin-top: -120px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1010,16 +1028,16 @@ footer .footer--contact .email {
           align-items: center;
   position: relative;
   z-index: 10;
-  padding: 0px 30px;
-  overflow-x: auto;
+  padding: 0px;
 }
 #features .features--wrapper {
   display: grid;
-  grid-template-columns: 60% 60% 60%;
-  padding: 0;
+  grid-template-columns: 75% 75% 75%;
+  padding: 20px;
   gap: 20px;
   max-width: 1400px;
   color: #49494C;
+  overflow-x: auto;
 }
 #features .features--wrapper a {
   color: #20B8E8;
@@ -2351,6 +2369,7 @@ footer .footer--contact .email {
   display: inline-block;
   margin-bottom: 20px;
   margin-right: 12px;
+  width: 100%;
 }
 
 .primary-hollow-button {
@@ -2408,6 +2427,7 @@ footer .footer--contact .email {
   .primary-button {
     display: inline-block;
     font-size: 1.1em;
+    width: unset;
   }
   .primary-button:not(.button-anim):not(.button-anim-inverse) {
     -webkit-transition: background-color 0.25s, color 0.25s, -webkit-box-shadow 0.25s;
