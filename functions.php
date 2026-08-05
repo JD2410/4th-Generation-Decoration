@@ -76,7 +76,7 @@ function fc_settings_page() {
     <form action="options.php" method="POST">
         <?php 
             settings_fields('fc_settings_group');
-            do_settings_fields('intro_wp_random_page');
+            do_settings_sections('intro_wp_random_page');
             submit_button();
         ?>
     </form>
@@ -84,7 +84,7 @@ function fc_settings_page() {
 }
 
 function fc_setup_settings() {
-    register_setting('fc_setting_group', 'fc_settings');
+    register_setting('fc_settings_group', 'fc_settings');
     add_settings_section(
         'fc_settings_section',
         'Main Settings',
@@ -99,7 +99,6 @@ function fc_setup_settings() {
         'fc_settings_section'
     );
 }
-
 add_action('admin_init', 'fc_setup_settings');
 
 function fc_generate_section() {
