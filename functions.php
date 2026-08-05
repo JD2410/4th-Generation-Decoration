@@ -61,22 +61,22 @@ add_action('init', function() {
 
 function fc_plugin_menu() {
     add_options_page(
-        'Settings Group',
-        'Settings Group',
+        '4th Generation Website Setting',
+        '4th Gen Settings',
         'manage_options',
-        'intro_wp_random_page',
-        'fc_settings_page'
+        '4th_gen_settings',
+        'fg_settings_page'
     );
 }
 add_action('admin_menu', 'fc_plugin_menu');
 
-function fc_settings_page() {
+function fg_settings_page() {
     ?>
     <h1>Group Settings</h1>
     <form action="options.php" method="POST">
         <?php 
-            settings_fields('fc_settings_group');
-            do_settings_sections('intro_wp_random_page');
+            settings_fields('fg_settings_group');
+            do_settings_sections('fourth_gen_page');
             submit_button();
         ?>
     </form>
@@ -84,36 +84,67 @@ function fc_settings_page() {
 }
 
 function fc_setup_settings() {
-    register_setting('fc_settings_group', 'fc_settings');
     add_settings_section(
-        'fc_settings_section',
+        'fg_settings_section',
         'Main Settings',
-        'fc_generate_section',
-        'intro_wp_random_page'
+        'fg_generate_section',
+        'fourth_gen_page'
+    );
+
+    register_setting('fg_settings_group', 'fg_settings');
+    add_settings_field (
+        'fg_mobile',
+        'Contact Number',
+        'fg_settings_mobile',
+        'fourth_gen_page',
+        'fg_settings_section'
     );
     add_settings_field (
-        'fc_color_field',
-        'Favourite color',
-        'fc_color_field',
-        'intro_wp_random_page',
-        'fc_settings_section'
+        'fg_email',
+        'Email Address',
+        'fg_settings_email',
+        'fourth_gen_page',
+        'fg_settings_section'
+    );
+    add_settings_field (
+        'fg_instagram',
+        'Email Address',
+        'fg_settings_instagram',
+        'fourth_gen_page',
+        'fg_settings_section'
     );
 }
 add_action('admin_init', 'fc_setup_settings');
 
-function fc_generate_section() {
+function fg_generate_section() {
     ?>
-    <p>Description Goes Here</p>
+    <p>This section allows you to change the contact and instagram links located in the header and footer of the website</p>
     <?php
 }
 
-function fc_color_field() {
-
-$settings = (array) get_option('fc_settings');
-$color = 'Blue';
-if(isset($settings['color'])) {
-    $color = esc_attr($settings['color']);
+function fg_settings_mobile() {
+    $settings = (array) get_option('fg_settings');
+    $mobileNumber = '07836277294';
+    if(isset($settings['mobile'])) {
+        $mobileNumber = esc_attr($settings['mobile']);
+    }
+    echo "<input type='text' name='fg_settings[mobile]' id='fg_settings[mobile]' value='$mobileNumber'>";
 }
-echo "<input type='text' name='fc_settings[color]' id='fc_settings[color]' value='$color'>";
 
+function fg_settings_instagram() {
+    $settings = (array) get_option('fg_settings');
+    $instagram = 'https://www.instagram.com/4thgendecorating';
+    if(isset($settings['instagram'])) {
+        $instagram = esc_attr($settings['instagram']);
+    }
+    echo "<input type='text' name='fg_settings[instagram]' id='fg_settings[instagram]' value='$instagram'>";
+}
+
+function fg_settings_email() {
+    $settings = (array) get_option('fg_settings');
+    $emailAddress= 'jkcanning@outlook.com';
+    if(isset($settings['email'])) {
+        $emailAddress = esc_attr($settings['email']);
+    }
+    echo "<input type='text' name='fg_settings[email]' id='fg_settings[email]' value='$emailAddress'>";
 }
