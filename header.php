@@ -17,6 +17,7 @@
                 ?>
                 <a href="callto:<?php echo $phone; ?>" class="phone"><?php echo $phone; ?></a>
                 <a href="mailto:<?php echo $email_address; ?>" class="email"><?php echo $email_address; ?></a>
+                <a href="https://www.instagram.com/4thgendecorating" target="_blank" class="instagram"><img src="<?php echo get_template_directory_uri() . '/assets/images/instagram.svg'; ?>" alt="4th Gen Decorating Instagram" width="20" height="20"></a>
             </div>
         </div>
         <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">

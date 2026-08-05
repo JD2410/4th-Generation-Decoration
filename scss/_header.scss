@@ -121,7 +121,7 @@ header {
                 width: 100%;
                 justify-content: start;
                 display: grid;
-                grid-template-columns: auto auto;
+                grid-template-columns: auto auto 1fr;
                 gap: 12px;
 
                 a {
@@ -137,6 +137,11 @@ header {
                 }
                 a:hover {
                     text-decoration: underline;
+                }
+
+                a.instagram {
+                    padding: 0;
+                    justify-self: right;
                 }
 
                 .phone {

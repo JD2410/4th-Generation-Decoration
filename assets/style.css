@@ -144,7 +144,7 @@ header .menu--wrapper ul .get-a-quote a {
         -ms-flex-pack: start;
             justify-content: start;
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto auto 1fr;
     gap: 12px;
   }
   header .quick-contact--container .quick-contact--wrapper a {
@@ -164,6 +164,10 @@ header .menu--wrapper ul .get-a-quote a {
   }
   header .quick-contact--container .quick-contact--wrapper a:hover {
     text-decoration: underline;
+  }
+  header .quick-contact--container .quick-contact--wrapper a.instagram {
+    padding: 0;
+    justify-self: right;
   }
   header .quick-contact--container .quick-contact--wrapper .phone {
     background-image: url("../assets/images/icon-white-phone.webp");
@@ -449,12 +453,16 @@ footer .footer--contact a {
   padding-left: 40px;
   background-position: left center;
   background-repeat: no-repeat;
+  line-height: 40px;
 }
 footer .footer--contact .call {
   background-image: url("../assets/images/icon-black-phone.webp");
 }
 footer .footer--contact .email {
   background-image: url("../assets/images/icon-black-email.webp");
+}
+footer .footer--contact .instagram {
+  background-image: url("../assets/images/instagram.svg");
 }
 
 @media (min-width: 768px) {

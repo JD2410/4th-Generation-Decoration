@@ -18,6 +18,7 @@
                 <ul>
                     <li><a href="callto:<?php echo $phone; ?>" class="call"><?php echo $phone; ?></a></li>
                     <li><a href="mailto:<?php echo $email_address; ?>" class="email"> <?php echo $email_address; ?></a></li>
+                    <li><a href="https://www.instagram.com/4thgendecorating" target="_blank" class="instagram">Instagram</a></li>
                 </ul>
             </div>
         </div>
