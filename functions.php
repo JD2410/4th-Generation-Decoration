@@ -58,3 +58,63 @@ add_action('init', function() {
     exit;
   }
 });
+
+function fc_plugin_menu() {
+    add_options_page(
+        'Settings Group',
+        'Settings Group',
+        'manage_options',
+        'intro_wp_random_page',
+        'fc_settings_page'
+    );
+}
+add_action('admin_menu', 'fc_plugin_menu');
+
+function fc_settings_page() {
+    ?>
+    <h1>Group Settings</h1>
+    <form action="options.php" method="POST">
+        <?php 
+            settings_fields('fc_settings_group');
+            do_settings_fields('intro_wp_random_page');
+            submit_button();
+        ?>
+    </form>
+    <?php
+}
+
+function fc_setup_settings() {
+    register_setting('fc_setting_group', 'fc_settings');
+    add_settings_section(
+        'fc_settings_section',
+        'Main Settings',
+        'fc_generate_section',
+        'intro_wp_random_page'
+    );
+    add_settings_field (
+        'fc_color_field',
+        'Favourite color',
+        'fc_color_field',
+        'intro_wp_random_page',
+        'fc_settings_section'
+    );
+}
+
+add_action('admin_init', 'fc_setup_settings');
+
+function fc_generate_section() {
+    ?>
+    <p>Description Goes Here</p>
+    <?php
+}
+
+function fc_color_field() {
+
+$settings = (array) get_option('fc_settings');
+$color = 'Blue';
+if(isset($settings['color'])) {
+    $color = esc_attr($settings['color']);
+}
+echo "<input type='text' name='fc_settings[color]' id='fc_settings[color]' value='$color'>";
+
+}
