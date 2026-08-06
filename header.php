@@ -12,12 +12,23 @@
         <div class='quick-contact--container'>
             <div class="quick-contact--wrapper">
                 <?php 
-                    $email_address = get_option('ci_email_address', '');
-                    $phone = get_option('ci_phone', '');
+                    $getSocialContact = (array) get_option('fg_settings');
+                    if(isset($getSocialContact['mobile'])) {
+                        ?>
+                        <a href="callto:<?php echo esc_attr($getSocialContact['mobile']); ?>" class="phone"><?php echo esc_attr($getSocialContact['mobile']); ?></a>
+                        <?php
+                    }
+                    if(isset($getSocialContact['email'])) {
+                        ?>
+                        <a href="mailto:<?php echo esc_attr($getSocialContact['email']); ?>" class="email"><?php echo esc_attr($getSocialContact['email']); ?></a>
+                        <?php
+                    }
+                    if(isset($getSocialContact['instagram'])) {
+                        ?>
+                        <a href="<?php echo esc_attr($getSocialContact['instagram']); ?>" target="_blank" class="instagram"><img src="<?php echo get_template_directory_uri() . '/assets/images/instagram.svg'; ?>" alt="4th Gen Decorating Instagram" width="20" height="20"></a>
+                        <?php
+                    }
                 ?>
-                <a href="callto:<?php echo $phone; ?>" class="phone"><?php echo $phone; ?></a>
-                <a href="mailto:<?php echo $email_address; ?>" class="email"><?php echo $email_address; ?></a>
-                <a href="https://www.instagram.com/4thgendecorating" target="_blank" class="instagram"><img src="<?php echo get_template_directory_uri() . '/assets/images/instagram.svg'; ?>" alt="4th Gen Decorating Instagram" width="20" height="20"></a>
             </div>
         </div>
         <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">

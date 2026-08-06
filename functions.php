@@ -59,6 +59,14 @@ add_action('init', function() {
   }
 });
 
+
+// Admin area Functionality
+function admin_theme_enqueue_styles() {
+    wp_enqueue_style('admin-theme-style', get_template_directory_uri() . '/assets/admin.css' );
+}
+add_action('admin_enqueue_scripts', 'admin_theme_enqueue_styles');
+
+
 function fc_plugin_menu() {
     add_options_page(
         '4th Generation Website Setting',
@@ -72,7 +80,7 @@ add_action('admin_menu', 'fc_plugin_menu');
 
 function fg_settings_page() {
     ?>
-    <h1>Group Settings</h1>
+    <h1>4th Generation Decorating Settings</h1>
     <form action="options.php" method="POST">
         <?php 
             settings_fields('fg_settings_group');
@@ -86,7 +94,7 @@ function fg_settings_page() {
 function fc_setup_settings() {
     add_settings_section(
         'fg_settings_section',
-        'Main Settings',
+        'Settings',
         'fg_generate_section',
         'fourth_gen_page'
     );
@@ -97,21 +105,24 @@ function fc_setup_settings() {
         'Contact Number',
         'fg_settings_mobile',
         'fourth_gen_page',
-        'fg_settings_section'
+        'fg_settings_section',
+        array('class' => 'options mobile')
     );
     add_settings_field (
         'fg_email',
         'Email Address',
         'fg_settings_email',
         'fourth_gen_page',
-        'fg_settings_section'
+        'fg_settings_section',
+        array('class' => 'options email')
     );
     add_settings_field (
         'fg_instagram',
-        'Email Address',
+        'Instagram',
         'fg_settings_instagram',
         'fourth_gen_page',
-        'fg_settings_section'
+        'fg_settings_section',
+        array('class' => 'options instagram')
     );
 }
 add_action('admin_init', 'fc_setup_settings');

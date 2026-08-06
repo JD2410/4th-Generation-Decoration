@@ -16,9 +16,24 @@
                 ?>
                 <h4>Contact</h4>
                 <ul>
-                    <li><a href="callto:<?php echo $phone; ?>" class="call"><?php echo $phone; ?></a></li>
-                    <li><a href="mailto:<?php echo $email_address; ?>" class="email"> <?php echo $email_address; ?></a></li>
-                    <li><a href="https://www.instagram.com/4thgendecorating" target="_blank" class="instagram">Instagram</a></li>
+                    <?php 
+                        $getSocialContact = (array) get_option('fg_settings');
+                        if(isset($getSocialContact['mobile'])) {
+                            ?>
+                            <li><a href="callto:<?php echo esc_attr($getSocialContact['mobile']); ?>" class="call"><?php echo esc_attr($getSocialContact['mobile']); ?></a></li>
+                            <?php
+                        }
+                        if(isset($getSocialContact['email'])) {
+                            ?>
+                            <li><a href="mailto:<?php echo esc_attr($getSocialContact['email']); ?>" class="email"> <?php echo esc_attr($getSocialContact['email']); ?></a></li>
+                            <?php
+                        }
+                        if(isset($getSocialContact['instagram'])) {
+                            ?>
+                            <li><a href="<?php echo esc_attr($getSocialContact['instagram']); ?>" target="_blank" class="instagram">Instagram</a></li>
+                            <?php
+                        }
+                    ?>
                 </ul>
             </div>
         </div>
@@ -27,3 +42,4 @@
 <?php wp_footer(); ?>
 </body>
 </html>
+

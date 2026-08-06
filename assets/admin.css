@@ -1,0 +1,27 @@
+.options {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-bottom: 10px;
+}
+.options.instagram:after {
+    content: "Update the instagram link located in the header and footer. Empty if you wish to remove it from the site";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0.8em;
+}
+.options.email:after {
+    content: "Update the email address link located in the header, footer and contact form. Empty if you wish to remove it from the site";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0.8em;
+}
+.options.mobile:after {
+    content: "Update the phone located in the header, footer and contact form. Empty if you wish to remove it from the site";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 0.8em;
+}
