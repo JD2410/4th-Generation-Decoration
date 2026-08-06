@@ -3,23 +3,43 @@ header.open .menu--wrapper ul {
   margin-left: 0;
 }
 
-header {
+header .quick-contact--container .phone, header .quick-contact--container .email {
   position: fixed;
-  width: 100%;
-  background-color: #fff;
-  top: 0;
-  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1215686275);
-          box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1215686275);
-  z-index: 9000;
+  width: 75px;
+  height: 75px;
+  border-radius: 50px;
+  background-color: #0E3898;
+  z-index: 8000;
+  right: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 50%;
 }
-header .quick-contact--container {
+header .quick-contact--container .phone span, header .quick-contact--container .email span {
   display: none;
 }
-header .menu--wrapper {
+header .quick-contact--container .phone {
+  bottom: 20px;
+  background-image: url("../assets/images/mobile-phone.svg");
+}
+header .quick-contact--container .email {
+  bottom: 120px;
+  background-image: url("../assets/images/mobile-email.svg");
+}
+header nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 9000;
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1215686275);
+          box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1215686275);
+}
+header nav .menu--wrapper {
   max-width: 1400px;
   width: 100%;
 }
-header .menu--wrapper .branding-wrapper {
+header nav .menu--wrapper .branding-wrapper {
   height: 62px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -29,9 +49,9 @@ header .menu--wrapper .branding-wrapper {
           justify-content: space-between;
   padding: 11px;
 }
-header .menu--wrapper .branding-wrapper #mobile-menu::before,
-header .menu--wrapper .branding-wrapper #mobile-menu::after,
-header .menu--wrapper .branding-wrapper #mobile-menu span {
+header nav .menu--wrapper .branding-wrapper #mobile-menu::before,
+header nav .menu--wrapper .branding-wrapper #mobile-menu::after,
+header nav .menu--wrapper .branding-wrapper #mobile-menu span {
   content: "";
   position: absolute;
   height: 4px;
@@ -39,22 +59,22 @@ header .menu--wrapper .branding-wrapper #mobile-menu span {
   width: 27px;
   background-color: #0E3898;
 }
-header .menu--wrapper .branding-wrapper #mobile-menu {
+header nav .menu--wrapper .branding-wrapper #mobile-menu {
   position: relative;
   width: 40px;
   height: 100%;
   cursor: pointer;
 }
-header .menu--wrapper .branding-wrapper #mobile-menu span {
+header nav .menu--wrapper .branding-wrapper #mobile-menu span {
   top: 18px;
 }
-header .menu--wrapper .branding-wrapper #mobile-menu::before {
+header nav .menu--wrapper .branding-wrapper #mobile-menu::before {
   top: 9px;
 }
-header .menu--wrapper .branding-wrapper #mobile-menu::after {
+header nav .menu--wrapper .branding-wrapper #mobile-menu::after {
   bottom: 9px;
 }
-header .menu--wrapper ul {
+header nav .menu--wrapper ul {
   height: calc(100vh - 62px);
   background: #fff;
   width: 100%;
@@ -67,7 +87,7 @@ header .menu--wrapper ul {
   -webkit-transition: margin-left 0.35s;
   transition: margin-left 0.35s;
 }
-header .menu--wrapper ul li {
+header nav .menu--wrapper ul li {
   height: 51px;
   display: block;
   display: -webkit-box;
@@ -80,7 +100,7 @@ header .menu--wrapper ul li {
       -ms-flex-align: center;
           align-items: center;
 }
-header .menu--wrapper ul li a {
+header nav .menu--wrapper ul li a {
   color: #49494C;
   text-decoration: none;
   display: -webkit-box;
@@ -95,14 +115,14 @@ header .menu--wrapper ul li a {
       -ms-flex-align: center;
           align-items: center;
 }
-header .menu--wrapper ul .get-a-quote {
+header nav .menu--wrapper ul .get-a-quote {
   position: absolute;
   bottom: 0;
   width: 100%;
   padding: 20px;
   height: auto;
 }
-header .menu--wrapper ul .get-a-quote a {
+header nav .menu--wrapper ul .get-a-quote a {
   background-color: #20B8E8;
   color: #fff;
   border-radius: 6px;
@@ -110,11 +130,19 @@ header .menu--wrapper ul .get-a-quote a {
 }
 
 #container {
-  padding-top: 64px;
+  padding-top: 40px;
 }
 
 @media (min-width: 900px) {
-  nav {
+  header {
+    position: fixed;
+    z-index: 9000;
+    background-color: #fff;
+    width: 100%;
+    -webkit-box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1215686275);
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.1215686275);
+  }
+  header nav {
     position: unset;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -123,6 +151,11 @@ header .menu--wrapper ul .get-a-quote a {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0 30px;
+    top: 0;
+    z-index: 0;
+    background-color: unset;
+    -webkit-box-shadow: none;
+            box-shadow: none;
   }
   header .quick-contact--container {
     display: -webkit-box;
@@ -136,6 +169,11 @@ header .menu--wrapper ul .get-a-quote a {
         -ms-flex-pack: center;
             justify-content: center;
     padding: 0px 30px;
+  }
+  header .quick-contact--container .phone, header .quick-contact--container .email {
+    position: unset;
+    bottom: unset;
+    right: unset;
   }
   header .quick-contact--container .quick-contact--wrapper {
     max-width: 1400px;

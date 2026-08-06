@@ -15,12 +15,12 @@
                     $getSocialContact = (array) get_option('fg_settings');
                     if(isset($getSocialContact['mobile']) && $getSocialContact['mobile'] != '') {
                         ?>
-                        <a href="callto:<?php echo esc_attr($getSocialContact['mobile']); ?>" class="phone"><?php echo esc_attr($getSocialContact['mobile']); ?></a>
+                        <a href="callto:<?php echo esc_attr($getSocialContact['mobile']); ?>" class="phone"><span><?php echo esc_attr($getSocialContact['mobile']); ?></span></a>
                         <?php
                     }
                     if(isset($getSocialContact['email']) && $getSocialContact['email'] != '') {
                         ?>
-                        <a href="mailto:<?php echo esc_attr($getSocialContact['email']); ?>" class="email"><?php echo esc_attr($getSocialContact['email']); ?></a>
+                        <a href="mailto:<?php echo esc_attr($getSocialContact['email']); ?>" class="email"><span><?php echo esc_attr($getSocialContact['email']); ?></span></a>
                         <?php
                     }
                     if(isset($getSocialContact['instagram']) && $getSocialContact['instagram'] != '') {

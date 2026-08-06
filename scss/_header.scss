@@ -4,117 +4,159 @@ header.open .menu--wrapper ul {
     margin-left: 0;
 }
 header {
-    position: fixed;
-    width: 100%;
-    background-color: #fff;
-    top: 0;
-    box-shadow: 0 3px 8px 0 #0000001f;
-    z-index: 9000;
-
     .quick-contact--container {
-        display: none;
-    }
+        .phone, .email {
+            position: fixed;
+            width: 75px;
+            height: 75px;
+            border-radius: 50px;
+            background-color: variables.$blue;
+            z-index: 8000;
+            right: 20px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: 50%;
 
-    .menu--wrapper {
-        max-width: variables.$maxwidth;
-        width: 100%;
-
-        .branding-wrapper {
-            height: 62px;
-            display: flex;
-            justify-content: space-between;
-            padding: 11px;
-            
-            #mobile-menu::before, 
-            #mobile-menu::after, 
-            #mobile-menu span {
-                content: "";
-                position: absolute;
-                height: 4px;
-                border-radius: 4px;
-                width: 27px;
-                background-color: variables.$blue;
+            & span {
+                display: none;
             }
-
-            #mobile-menu {
-                position: relative;
-                width: 40px;
-                height: 100%;
-                cursor: pointer;
-
-                span { top: 18px; }
-            }
-
-            #mobile-menu::before { top: 9px; }
-            #mobile-menu::after { bottom: 9px; }
         }
+        .phone {
+            bottom: 20px;
+            background-image: url('../assets/images/mobile-phone.svg');
+        }
+        .email {
+            bottom: 120px;
+            background-image: url('../assets/images/mobile-email.svg');
+        }
+    }
+    nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 9000;
+        background-color: #fff;
+        box-shadow: 0 3px 8px 0 #0000001f;
 
-        ul {
-            height: calc(100vh - 62px);
-            background: #fff;
+        .menu--wrapper {
+            max-width: variables.$maxwidth;
             width: 100%;
-            text-align: center;
-            box-shadow: inset 0 4px 17px 0px rgba(0, 0, 0, 0.2588235294);
-            padding-top: 5px;
-            position: absolute;
-            margin-left: -100%;
-            transition: margin-left 0.35s;
 
-            
-
-            li {
-                height: 51px;
-                display: block;
+            .branding-wrapper {
+                height: 62px;
                 display: flex;
-                justify-content: center;
-                align-items: center;
+                justify-content: space-between;
+                padding: 11px;
+                
+                #mobile-menu::before, 
+                #mobile-menu::after, 
+                #mobile-menu span {
+                    content: "";
+                    position: absolute;
+                    height: 4px;
+                    border-radius: 4px;
+                    width: 27px;
+                    background-color: variables.$blue;
+                }
 
-                a {
-                    color: variables.$black;
-                    text-decoration: none;
-                    display: flex;
-                    width: 100%;
+                #mobile-menu {
+                    position: relative;
+                    width: 40px;
                     height: 100%;
+                    cursor: pointer;
+
+                    span { top: 18px; }
+                }
+
+                #mobile-menu::before { top: 9px; }
+                #mobile-menu::after { bottom: 9px; }
+            }
+
+            ul {
+                height: calc(100vh - 62px);
+                background: #fff;
+                width: 100%;
+                text-align: center;
+                box-shadow: inset 0 4px 17px 0px rgba(0, 0, 0, 0.2588235294);
+                padding-top: 5px;
+                position: absolute;
+                margin-left: -100%;
+                transition: margin-left 0.35s;
+
+                
+
+                li {
+                    height: 51px;
+                    display: block;
+                    display: flex;
                     justify-content: center;
                     align-items: center;
+
+                    a {
+                        color: variables.$black;
+                        text-decoration: none;
+                        display: flex;
+                        width: 100%;
+                        height: 100%;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                }
+
+                .get-a-quote {
+                    position: absolute;
+                    bottom: 0;
+                    width: 100%;
+                    padding: 20px;
+                    height: auto;
+
+                    a {
+                        background-color: variables.$lightblue;
+                        color: #fff;
+                        border-radius: 6px;
+                        padding: 14px 0;
+                    }
                 }
             }
-
-            .get-a-quote {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                padding: 20px;
-                height: auto;
-
-                a {
-                    background-color: variables.$lightblue;
-                    color: #fff;
-                    border-radius: 6px;
-                    padding: 14px 0;
-                }
-            }
-        }
-    }   
+        }   
+    }
 }
 #container {
-    padding-top: 64px;
+    padding-top: 40px;
 }
 
 @media (min-width: 900px) {
-    nav {
-        position: unset;
-        display: flex;
-        justify-content: center;
-        padding: 0 30px;
-    }
+    
     header {
+        position: fixed;
+        z-index: 9000;
+        background-color: #fff;
+        width: 100%;
+        box-shadow: 0 3px 8px 0 #0000001f;
+
+        nav {
+            position: unset;
+            display: flex;
+            justify-content: center;
+            padding: 0 30px;
+            top: 0;
+            z-index: 0;
+            background-color: unset;
+            box-shadow: none;
+        }
+
         .quick-contact--container {
             display: flex;
             background-color: variables.$blue;
             align-items: center;
             justify-content: center;
             padding: 0px 30px;
+
+            .phone, .email {
+                position: unset;
+                bottom: unset;
+                right: unset;
+            }
         
             .quick-contact--wrapper {
                 max-width: variables.$maxwidth;
