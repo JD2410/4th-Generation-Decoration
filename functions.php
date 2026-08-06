@@ -139,7 +139,7 @@ function fg_settings_mobile() {
     if(isset($settings['mobile'])) {
         $mobileNumber = esc_attr($settings['mobile']);
     }
-    echo "<input type='text' name='fg_settings[mobile]' id='fg_settings[mobile]' value='$mobileNumber'>";
+    echo "<input type='text' name='fg_settings[mobile]' id='fg_settings[mobile]' value='$mobileNumber' placeholder='$mobileNumber'>";
 }
 
 function fg_settings_instagram() {
@@ -148,7 +148,7 @@ function fg_settings_instagram() {
     if(isset($settings['instagram'])) {
         $instagram = esc_attr($settings['instagram']);
     }
-    echo "<input type='text' name='fg_settings[instagram]' id='fg_settings[instagram]' value='$instagram'>";
+    echo "<input type='text' name='fg_settings[instagram]' id='fg_settings[instagram]' value='$instagram' placeholder='$instagram'>";
 }
 
 function fg_settings_email() {
@@ -157,5 +157,5 @@ function fg_settings_email() {
     if(isset($settings['email'])) {
         $emailAddress = esc_attr($settings['email']);
     }
-    echo "<input type='text' name='fg_settings[email]' id='fg_settings[email]' value='$emailAddress'>";
+    echo "<input type='text' name='fg_settings[email]' id='fg_settings[email]' value='$emailAddress' placeholder='$emailAddress'>";
 }

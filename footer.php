@@ -18,17 +18,17 @@
                 <ul>
                     <?php 
                         $getSocialContact = (array) get_option('fg_settings');
-                        if(isset($getSocialContact['mobile'])) {
+                        if(isset($getSocialContact['mobile']) && $getSocialContact['mobile'] != '') {
                             ?>
                             <li><a href="callto:<?php echo esc_attr($getSocialContact['mobile']); ?>" class="call"><?php echo esc_attr($getSocialContact['mobile']); ?></a></li>
                             <?php
                         }
-                        if(isset($getSocialContact['email'])) {
+                        if(isset($getSocialContact['email']) && $getSocialContact['email'] != '') {
                             ?>
                             <li><a href="mailto:<?php echo esc_attr($getSocialContact['email']); ?>" class="email"> <?php echo esc_attr($getSocialContact['email']); ?></a></li>
                             <?php
                         }
-                        if(isset($getSocialContact['instagram'])) {
+                        if(isset($getSocialContact['instagram']) && $getSocialContact['instagram'] != '') {
                             ?>
                             <li><a href="<?php echo esc_attr($getSocialContact['instagram']); ?>" target="_blank" class="instagram">Instagram</a></li>
                             <?php

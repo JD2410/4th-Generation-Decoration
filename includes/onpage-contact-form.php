@@ -8,12 +8,12 @@
             <div class="quick-contact--wrapper">
                 <?php 
                     $getContact = (array) get_option('fg_settings');
-                    if(isset($getContact['mobile'])) {
+                    if(isset($getContact['mobile']) && $getContact['mobile'] != '') {
                         ?>
                         <a href="callto:<?php echo esc_attr($getContact['mobile']); ?>" class="phone-number"><?php echo esc_attr($getContact['mobile']); ?></a>
                         <?php
                     }
-                    if(isset($getContact['email'])) {
+                    if(isset($getContact['email']) && $getContact['email'] != '') {
                         ?>
                         <a href="mailto:<?php echo esc_attr($getContact['email']); ?>" class="email-address"><?php echo esc_attr($getContact['email']); ?></a>
                         <?php
