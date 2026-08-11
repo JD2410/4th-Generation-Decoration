@@ -22,7 +22,10 @@
             </div>
         </div>
         <div class="contact--form">
-            <?php echo do_shortcode('[contact-form-7 id="540f501" title="Contact Form"]'); ?>
+            <?php 
+                echo do_shortcode('[contact-form-7 id="540f501" title="Contact Form"]'); // Local
+                //echo do_shortcode('[contact-form-7 id="cb3a2eb" title="Primary Contact Form"]'); // Live
+            ?>
         </div>
     </div>
 </section>
