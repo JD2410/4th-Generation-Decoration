@@ -156,6 +156,13 @@ header {
                 position: unset;
                 bottom: unset;
                 right: unset;
+                height: unset;
+                width: unset;
+                border-radius: 0;
+
+                & span {
+                    display: unset;
+                }
             }
         
             .quick-contact--wrapper {
