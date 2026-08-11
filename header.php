@@ -7,6 +7,16 @@
 </head>
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
+<?php 
+    if (is_front_page() ) {
+        ?> 
+            <div id="loading" 
+                data-style="<?php echo get_template_directory_uri() . '/assets/style-min.css'; ?>"
+                data-script="<?php echo get_template_directory_uri() . '/assets/script.js'; ?>"
+            >Loading</div>
+        <?php
+    }
+?>
 <div id="wrapper" class="hfeed">
     <header id="header" class="animate-scroll" role="banner">
         <div class='quick-contact--container'>
