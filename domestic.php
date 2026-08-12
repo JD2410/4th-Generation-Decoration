@@ -60,7 +60,10 @@ $service_text = get_field('domestic_services_text');
         <a id="gallery"></a>
         <h2>Transforming Spaces, Creating Smiles!</h2>
         <p>We believe every space has the potential to shine, and our decorator's expertise makes it happen! Check out these incredible before-and-after transformations that showcase the care, creativity, and craftsmanship we bring to every project. Whether it's a cozy home or a bustling business, we're here to turn your vision into reality.</p>
-        <?php echo do_shortcode('[foogallery id="100"]') ?>
+        <?php 
+            echo do_shortcode('[foogallery id="100"]'); // Local
+            //echo do_shortcode('[foogallery id="181"]'); // Live 
+        ?>
     </div>
 </section>
 <?php include "includes/onpage-contact-form.php"; ?>

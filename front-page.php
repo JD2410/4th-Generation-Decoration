@@ -187,7 +187,7 @@ $residential = get_field("residential");
                 </div>
             <?php } ?>
         </div>
-        <a href="#" target="_blank" class="mybuilder"><img src="<?php echo get_template_directory_uri() . "/assets/images/front-page/testimonials/my-builder-logo.webp" ?>" height="auto" width="100%" alt="MyBuilder">Click her to see all reviews</a>
+        <a href="https://www.mybuilder.com/profile/jason_canning" target="_blank" class="mybuilder"><img src="<?php echo get_template_directory_uri() . "/assets/images/front-page/testimonials/my-builder-logo.webp" ?>" height="auto" width="100%" alt="MyBuilder">Click her to see all reviews</a>
     </div>
 </section>
 <section class="faq">
