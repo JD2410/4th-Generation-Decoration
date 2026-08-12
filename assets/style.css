@@ -2633,56 +2633,6 @@ footer .footer--contact .instagram {
   }
 }
 @media (min-width: 1200px) {
-  #header #menu .menu--wrapper .branding-wrapper img {
-    -webkit-transition: opacity 0.8s;
-    transition: opacity 0.8s;
-    opacity: 0;
-  }
-  #header #menu .menu--wrapper ul li {
-    opacity: 0;
-    -webkit-transition: opacity 0.8s;
-    transition: opacity 0.8s;
-  }
-  #header #menu .menu--wrapper ul li:nth-child(1) {
-    -webkit-transition-delay: 0.4s;
-            transition-delay: 0.4s;
-  }
-  #header #menu .menu--wrapper ul li:nth-child(2) {
-    -webkit-transition-delay: 0.6s;
-            transition-delay: 0.6s;
-  }
-  #header #menu .menu--wrapper ul li:nth-child(3) {
-    -webkit-transition-delay: 0.8s;
-            transition-delay: 0.8s;
-  }
-  #header #menu .menu--wrapper ul li:nth-child(4) {
-    -webkit-transition-delay: 1s;
-            transition-delay: 1s;
-  }
-  #header #menu .menu--wrapper ul li:nth-child(5) {
-    -webkit-transition-delay: 1.2s;
-            transition-delay: 1.2s;
-  }
-  #header #menu .menu--wrapper ul li:nth-child(6) {
-    -webkit-transition-delay: 1.4s;
-            transition-delay: 1.4s;
-  }
-  #header.visible #menu .menu--wrapper .branding-wrapper img {
-    opacity: 1;
-  }
-  #header.visible #menu .menu--wrapper ul li {
-    opacity: 1;
-  }
-  #hero {
-    opacity: 0;
-    -webkit-transition: opacity 0.8s;
-    transition: opacity 0.8s;
-    -webkit-transition-delay: 0.4s;
-            transition-delay: 0.4s;
-  }
-  #hero.visible {
-    opacity: 1;
-  }
   #hero .hero--container .hero--wrapper .sub-text {
     -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
     transition: opacity 0.8s, -webkit-transform 0.8s;

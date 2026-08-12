@@ -1,8 +1,8 @@
-body {
-    overflow: hidden;
-}
+
 #loading {
     position: absolute;
+    transition: opacity 0.8s;
+    opacity: 1;
     width: 100%;
     height: 100%;
     z-index: 9500;
@@ -10,4 +10,44 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+body.loading-complete #loading {
+    opacity: 0;
+}
+@media (min-width: 1200px) {
+
+    #header #menu .menu--wrapper {
+        .branding-wrapper img {
+            opacity: 0;
+            transition: opacity 0.8s;
+        }
+        ul li {
+            opacity: 0;
+            transition: opacity 0.8s;
+
+            &:nth-child(1) { transition-delay: 0.4s; }
+            &:nth-child(2) { transition-delay: 0.6s; }
+            &:nth-child(3) { transition-delay: 0.8s; }
+            &:nth-child(4) { transition-delay: 1s; }
+            &:nth-child(5) { transition-delay: 1.2s; }
+            &:nth-child(6) { transition-delay: 1.4s; }
+        }
+    }
+
+    #hero  {
+        opacity: 0;
+        transition: opacity 0.8s;
+        transition-delay: 0.4s;
+    }
+    .loading-complete.loader-hidden { 
+        #hero.visible { opacity: 1; }
+        #header.visible #menu .menu--wrapper {
+            .branding-wrapper img {
+                opacity: 1;
+            }
+            ul li {
+                opacity: 1;
+            }
+        }
+    }
 }

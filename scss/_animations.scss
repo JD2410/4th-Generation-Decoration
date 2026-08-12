@@ -2,36 +2,14 @@
 
 @media (min-width: 1200px) {
 
-    #header #menu .menu--wrapper {
-        .branding-wrapper img {
-            transition: opacity variables.$animation-speed;
-            opacity: 0;
-        }
-        ul li {
-            opacity: 0;
-            transition: opacity variables.$animation-speed;
-
-            &:nth-child(1) { transition-delay: 0.4s; }
-            &:nth-child(2) { transition-delay: 0.6s; }
-            &:nth-child(3) { transition-delay: 0.8s; }
-            &:nth-child(4) { transition-delay: 1.0s; }
-            &:nth-child(5) { transition-delay: 1.2s; }
-            &:nth-child(6) { transition-delay: 1.4s; }
-        }
-    }
-    #header.visible #menu .menu--wrapper {
-        .branding-wrapper img { opacity: 1; }
-        ul li { opacity: 1; }
-    }
-
     #hero  {
-        opacity: 0;
-        transition: opacity variables.$animation-speed;
-        transition-delay: 0.4s;
+        // opacity: 0;
+        // transition: opacity variables.$animation-speed;
+        // transition-delay: 0.4s;
 
-        &.visible {
-            opacity: 1;
-        }
+        // &.visible {
+        //     opacity: 1;
+        // }
         .hero--container .hero--wrapper {
             .sub-text {
                 transition: 

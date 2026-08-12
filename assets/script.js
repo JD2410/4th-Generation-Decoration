@@ -5,7 +5,7 @@ window.onload = (event) => {
 
     const bodyClass = document.body.classList;
     scr.textExtension();
-    scr.scrollAnimation();
+    //scr.scrollAnimation();
     scr.listTranstionDelaySet()
     if (bodyClass.contains('home')) {
         scr.testimonials.init();
