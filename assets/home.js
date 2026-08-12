@@ -1,4 +1,13 @@
 function loadScript(src, callback) {
+    let script = document.createElement('script');
+    script.src = src;
+    script.onload = () => callback(null, script);
+    script.error = () => callback(new Error(`Script Loading Error: ${src}`));
+
+    document.head.appendChild(script);
+}
+
+function loadStyles(src, callback) {
     let script = document.createElement('link');
     script.href = src;
     script.rel = "stylesheet";
@@ -7,20 +16,40 @@ function loadScript(src, callback) {
 
     document.head.appendChild(script);
 }
-
-document.onreadystatechange = () => {
-    if (document.readyState === "complete") {
+let loadingScript = {
+    script: "",
+    style: "",
+    init() {
 
         let loadingElement = document.getElementById('loading');
-        let script = loadingElement.dataset.script;
-        let style = loadingElement.dataset.style;
-        console.log(style)
+        this.script = loadingElement.dataset.script;
+        this.style = loadingElement.dataset.style;
+        this.scriptInit()
+    },
+    scriptInit() {
+        console.log("Hello")
 
-        loadScript(style, function(error, script) {
+        loadScript(this.script, function(error, script) {
             if (error) {
                 console.log(error)
+            } else {
+                loadingScript.styleInit()
+            }
+        })
+    },
+    styleInit() {
+        loadStyles(this.style, function(error, script) {
+            if (error) {
+                console.log(error)
+            } else {
+                console.log("Done")
             }
         })
     }
 }
 
+document.onreadystatechange = () => {
+    if (document.readyState === "complete") {
+        loadingScript.init()
+    }
+}
