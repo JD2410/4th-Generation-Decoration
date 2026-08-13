@@ -549,86 +549,6 @@ footer .footer--contact .instagram {
     background-image: url("../assets/images/icon-white-email.webp");
   }
 }
-#hero::before,
-#hero::after,
-.hero--image::before {
-  content: "";
-  display: block;
-  border: 40px solid rgba(163, 163, 163, 0.0784313725);
-  border-radius: 50%;
-  position: absolute;
-  z-index: 0;
-}
-
-#hero::before {
-  width: 190px;
-  height: 190px;
-  left: 0px;
-  top: 70px;
-}
-
-#hero::after {
-  width: 430px;
-  height: 430px;
-  left: -130px;
-  top: -50px;
-}
-
-.hero--image::before {
-  width: 700px;
-  height: 700px;
-  left: -270px;
-  top: -205px;
-}
-
-#hero {
-  background-color: #FAFAFA;
-  overflow: hidden;
-  position: relative;
-}
-#hero .hero--image {
-  background-repeat: no-repeat;
-  color: #49494C;
-  background-size: cover;
-}
-#hero .hero--image .hero--container {
-  padding: 80px 30px 170px 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: relative;
-  z-index: 1;
-}
-#hero .hero--image .hero--container .hero--wrapper {
-  max-width: 1400px;
-  width: 100%;
-}
-#hero .hero--image .hero--container .sub-text {
-  display: none;
-}
-#hero .hero--image .hero--container p {
-  line-height: 1.75;
-  margin-bottom: 30px;
-}
-#hero .hero--image .hero--container h1 {
-  color: #20B8E8;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 20px 0;
-  font-size: 1.5em;
-}
-#hero .hero--image .hero--container h1 span {
-  color: #49494C;
-  display: block;
-}
-
 @media (min-width: 768px) {
   #hero {
     position: relative;
@@ -659,7 +579,7 @@ footer .footer--contact .instagram {
   #hero .hero--image {
     background-image: url("../assets/images/front-page/hero/hero-image.png");
     background-position: calc(50% + 400px) -150px;
-    color: #49494C;
+    color: 49494C;
     background-size: 682px;
     height: 560px;
   }
@@ -692,44 +612,26 @@ footer .footer--contact .instagram {
 }
 @media (min-width: 1200px) {
   #hero::before {
-    -webkit-transition: left 1s, opacity 2s;
-    transition: left 1s, opacity 2s;
     opacity: 0;
     width: 1100px;
     height: 1100px;
     left: calc(50% + 220px);
     top: -310px;
   }
-  #hero.visible::before {
-    left: calc(50% - 220px);
-    opacity: 1;
-  }
   #hero::after {
-    -webkit-transition: left 1s, opacity 2s;
-    transition: left 1s, opacity 2s;
     opacity: 0;
     width: 1440px;
     height: 1440px;
     left: calc(50% + 390px);
     top: -482px;
   }
-  #hero.visible::after {
-    left: calc(50% - 390px);
-    opacity: 1;
-  }
   #hero .hero--image::before {
-    -webkit-transition: left 1s, opacity 2s;
-    transition: left 1s, opacity 2s;
     opacity: 0;
     width: 1800px;
     height: 1800px;
     left: calc(50% + 575px);
     top: -690px;
     z-index: 1;
-  }
-  #hero.visible .hero--image::before {
-    opacity: 1;
-    left: calc(50% - 575px);
   }
   #hero .hero--image {
     height: 600px;
@@ -2633,67 +2535,6 @@ footer .footer--contact .instagram {
   }
 }
 @media (min-width: 1200px) {
-  #hero .hero--container .hero--wrapper .sub-text {
-    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
-    transition: opacity 0.8s, -webkit-transform 0.8s;
-    transition: opacity 0.8s, transform 0.8s;
-    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
-    -webkit-transition-delay: 1s;
-            transition-delay: 1s;
-    opacity: 0;
-  }
-  #hero .hero--container .hero--wrapper h1 {
-    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
-    transition: opacity 0.8s, -webkit-transform 0.8s;
-    transition: opacity 0.8s, transform 0.8s;
-    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
-    opacity: 0;
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
-    -webkit-transition-delay: 1.3s;
-            transition-delay: 1.3s;
-  }
-  #hero .hero--container .hero--wrapper h1 span {
-    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
-    transition: opacity 0.8s, -webkit-transform 0.8s;
-    transition: opacity 0.8s, transform 0.8s;
-    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
-    opacity: 0;
-    -webkit-transition-delay: 1.6s;
-            transition-delay: 1.6s;
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
-  }
-  #hero .hero--container .hero--wrapper p {
-    opacity: 0;
-    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
-    transition: opacity 0.8s, -webkit-transform 0.8s;
-    transition: opacity 0.8s, transform 0.8s;
-    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
-    opacity: 0;
-    -webkit-transition-delay: 1.9s;
-            transition-delay: 1.9s;
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
-  }
-  #hero .hero--container .hero--wrapper .anim-con {
-    -webkit-transition: opacity 0.8s, -webkit-transform 0.8s;
-    transition: opacity 0.8s, -webkit-transform 0.8s;
-    transition: opacity 0.8s, transform 0.8s;
-    transition: opacity 0.8s, transform 0.8s, -webkit-transform 0.8s;
-    opacity: 0;
-    -webkit-transform: translateX(-20px);
-            transform: translateX(-20px);
-    -webkit-transition-delay: 2.2s;
-            transition-delay: 2.2s;
-  }
-  #hero.visible .hero--container .hero--wrapper .sub-text, #hero.visible .hero--container .hero--wrapper p, #hero.visible .hero--container .hero--wrapper .anim-con, #hero.visible .hero--container .hero--wrapper h1, #hero.visible .hero--container .hero--wrapper h1 span {
-    opacity: 1;
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
   #features .card {
     -webkit-transition: opacity 0.8s;
     transition: opacity 0.8s;

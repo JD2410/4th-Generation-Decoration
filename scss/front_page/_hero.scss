@@ -1,79 +1,6 @@
 @use '../variables';
-#hero::before,
-#hero::after,
-.hero--image::before {
-    content: "";
-    display: block;
-    border: 40px solid #a3a3a314;
-    border-radius: 50%;
-    position: absolute;
-    z-index: 0;
-}
-#hero::before {
-    width: 190px;
-    height: 190px;
-    left: 0px;
-    top: 70px;
-}
-#hero::after {
-    width: 430px;
-    height: 430px;
-    left: -130px;  
-    top: -50px;
-}
-.hero--image::before {
-    width: 700px;
-    height: 700px;
-    left: -270px;  
-    top: -205px;
-}
-#hero {
-    background-color: #FAFAFA;
-    overflow: hidden;
-    position: relative;
-    
-    .hero--image {
-        background-repeat: no-repeat;
-        color: variables.$black;
-        background-size: cover;
 
-        .hero--container {
-            padding: 80px 30px 170px 30px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            position: relative;
-            z-index: 1;
-
-            .hero--wrapper {
-                max-width: variables.$maxwidth;
-                width: 100%;
-            }
-
-            .sub-text {
-                display: none;
-            }
-            p {
-                line-height: 1.75;
-                margin-bottom: 30px;
-            }
-            h1 {
-                color: variables.$lightblue;
-                font-weight: 700;
-                line-height: 1.2;
-                margin: 20px 0;
-                font-size: 1.5em;
-
-                span {
-                    color: variables.$black;
-                    display: block;
-                }
-            }
-        }
-    }
-}
-
-@media (min-width: variables.$mobile-breakpoint) {
+@media (min-width: 768px) {
 #hero {
     position: relative;
 }
@@ -103,7 +30,7 @@
 #hero .hero--image {
     background-image: url("../assets/images/front-page/hero/hero-image.png");
     background-position: calc(50% + 400px) -150px;
-    color: variables.$black;
+    color: 49494C;
     background-size: 682px;
     height: 560px;
     
@@ -135,43 +62,28 @@
     }
 }
 }
-@media (min-width: variables.$desktop-breakpoint) {
+@media (min-width: 1200px) {
     #hero::before {
-        transition: left 1s, opacity 2s;
         opacity: 0;
         width: 1100px;
         height: 1100px;
         left: calc(50% + 220px);
         top: -310px;
     }
-    #hero.visible::before {
-        left: calc(50% - 220px);
-        opacity: 1;
-    }
     #hero::after {
-        transition: left 1s, opacity 2s;
         opacity: 0;
         width: 1440px;
         height: 1440px;
         left: calc(50% + 390px);
         top: -482px;
     }
-    #hero.visible::after {
-        left: calc(50% - 390px);
-        opacity: 1;
-    }
     #hero .hero--image::before {
-        transition: left 1s, opacity 2s;
         opacity: 0;
         width: 1800px;
         height: 1800px;
         left: calc(50% + 575px);
         top: -690px;
         z-index: 1;
-    }
-    #hero.visible .hero--image::before {
-        opacity: 1;
-        left: calc(50% - 575px);
     }
     #hero .hero--image {
         height: 600px;

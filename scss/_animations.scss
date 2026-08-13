@@ -2,62 +2,6 @@
 
 @media (min-width: 1200px) {
 
-    #hero  {
-        .hero--container .hero--wrapper {
-            .sub-text {
-                transition: 
-                    opacity variables.$animation-speed,
-                    transform variables.$animation-speed;
-                transform: translateX(-20px);
-                transition-delay: 1s;
-                opacity: 0;
-            }
-
-            h1 {
-                transition: 
-                    opacity variables.$animation-speed,
-                    transform variables.$animation-speed;
-                opacity: 0;
-                transform: translateX(-20px);
-                transition-delay: 1.3s;
-
-                span {
-                    transition: 
-                        opacity variables.$animation-speed,
-                        transform variables.$animation-speed;
-                    opacity: 0;
-                    transition-delay: 1.6s;
-                    transform: translateX(-20px);
-
-                }
-            }
-            p {
-                opacity: 0;
-                transition: 
-                    opacity variables.$animation-speed,
-                    transform variables.$animation-speed;
-                opacity: 0;
-                transition-delay: 1.9s;
-                transform: translateX(-20px);
-            }
-            .anim-con {
-                transition: 
-                    opacity variables.$animation-speed,
-                    transform variables.$animation-speed;
-                opacity: 0;
-                transform: translateX(-20px);
-                transition-delay: 2.2s;
-            }
-        }
-
-        &.visible .hero--container .hero--wrapper  {
-            .sub-text, p, .anim-con, h1, h1 span {
-                opacity: 1;
-                transform: translateX(0)
-            }
-        }
-    }
-
     #features {
         .card {
             transition: 
