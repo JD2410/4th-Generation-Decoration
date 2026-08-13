@@ -60,7 +60,7 @@ $residential = get_field("residential");
     </div>
 </section>
 
-<section class="homeblock even about animate-scroll standard-animation">
+<section class="homeblock even about animate-scroll standard-animation" style="min-height: 600px;">
     <a id="about"></a>
     <div class="wrapper">
         <div class="images" id="profile-container">
